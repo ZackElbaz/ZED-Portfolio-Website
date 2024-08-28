@@ -179,7 +179,7 @@ import './DropdownWidget.css'; // Import the CSS file
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 
 const ProjectList = [
-    { id: 0, name: 'Real Time Kinematic Device', url: '/Projects/LightbugRTK' },
+    { id: 0, name: 'Real Time Kinematic GPS Device', url: '/Projects/LightbugRTK' },
     { id: 1, name: 'Knee Implant Test Rig', url: '/Projects/TKRTestDevice' },
     { id: 2, name: 'Bicycle Ambulance', url: '/Projects/BicycleAmbulance' },
     { id: 3, name: 'Boeing 737 Seat', url: '/Projects/Boeing737Seat' },
