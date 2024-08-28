@@ -131,7 +131,7 @@ function HomePage() {
                   </div>
                   <div className="icon-container">
                     <div>
-                      <a href="https://www.google.com/maps?q=Bristol,%20UK" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.google.com/maps?q=London,%20UK" target="_blank" rel="noopener noreferrer">
                         <img src={`${process.env.PUBLIC_URL}/LocationSVG.svg`} alt="Location" className="icon" />
                       </a>
                     </div>

@@ -1,12 +1,12 @@
-// Dissertation.js
+// BicycleAmbulance.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Dissertation() {
+function BicycleAmbulance() {
   return (
     <div>
-      <h1>Welcome to the Dissertation!</h1>
-      <p>This is the content of your Dissertation.</p>
+      <h1>Welcome to the BicycleAmbulance!</h1>
+      <p>This is the content of your BicycleAmbulance.</p>
       <Link to="/force-refresh"> {/* Navigate to ForceRefresh route */}
         <button>Go to Home Page</button>
       </Link>
@@ -14,5 +14,4 @@ function Dissertation() {
   );
 }
 
-export default Dissertation;
-
+export default BicycleAmbulance;
