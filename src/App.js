@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './HomePage';
+import LightbugRTK from './Projects/LightbugRTK';
+import Dissertation from './Projects/Dissertation';
+import ForceRefresh from './ForceRefresh';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/force-refresh" element={<ForceRefresh />} />
+        <Route path="/Projects/LightbugRTK" element={<LightbugRTK />} />
+        <Route path="/Projects/Dissertation" element={<Dissertation />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,9 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 1vw; /* Adjust the font size relative to viewport width */
+    color: #ffffff; /* Font color */
+    width: 180%; /* Set the width of the text box to 80% of its container's width */
+    margin: 0 auto; /* Center the text box horizontally */
+    margin-left: -85%; /* Shift the text box 10% to the left */
+}
