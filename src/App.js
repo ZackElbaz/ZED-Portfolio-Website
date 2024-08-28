@@ -26,6 +26,6 @@ export default App;
 
 
 // git add .
-// git commit -m "Describe the changes you made"
+// git commit -m "Newest version"
 // git push origin main
 // npm run deploy

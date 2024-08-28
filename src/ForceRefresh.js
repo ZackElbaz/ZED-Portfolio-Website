@@ -7,7 +7,7 @@ function ForceRefresh() {
 
   useEffect(() => {
     // Force the browser to reload the page from the server
-    window.location.replace('/');
+    navigate('/');
   }, [navigate]);
 
   return null; // This component doesn't need to render anything
