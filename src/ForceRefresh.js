@@ -21,7 +21,7 @@ import { useEffect } from 'react';
 function ForceRefresh() {
   useEffect(() => {
     // Directly set the URL to ensure a full page reload
-    window.location.href = 'http://localhost:3000/ZED-Portfolio-Website';
+    window.location.href = 'http://zackelbaz.github.io/ZED-Portfolio-Website';
   }, []);
 
   return null; // This component doesn't need to render anything
