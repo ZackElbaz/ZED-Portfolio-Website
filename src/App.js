@@ -8,7 +8,7 @@ import BicycleAmbulance from './Projects/BicycleAmbulance';
 import Boeing737Seat from './Projects/Boeing737Seat';
 import ThreeDGPS from './Projects/ThreeDGPS';
 import RaceTrackerGPS from './Projects/RaceTrackerGPS';
-import FireRiskAssesment from './Projects/FireRiskAssesment';
+import FireRiskAssessment from './Projects/FireRiskAssessment';
 import PhysicalGIF from './Projects/PhysicalGIF';
 import ReactionDiffusion from './Projects/ReactionDiffusion';
 import MechanicalMirror from './Projects/MechanicalMirror';
@@ -27,7 +27,7 @@ function App() {
         <Route path="/Projects/Boeing737Seat" element={<Boeing737Seat />} />
         <Route path="/Projects/ThreeDGPS" element={<ThreeDGPS />} />
         <Route path="/Projects/RaceTrackerGPS" element={<RaceTrackerGPS />} />
-        <Route path="/Projects/FireRiskAssesment" element={<FireRiskAssesment />} />
+        <Route path="/Projects/FireRiskAssessment" element={<FireRiskAssessment />} />
         <Route path="/Projects/PhysicalGIF" element={<PhysicalGIF />} />
         <Route path="/Projects/ReactionDiffusion" element={<ReactionDiffusion />} />
         <Route path="/Projects/MechanicalMirror" element={<MechanicalMirror />} />

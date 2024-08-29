@@ -185,7 +185,7 @@ const ProjectList = [
     { id: 3, name: 'Boeing 737 Seat', url: '/Projects/Boeing737Seat' },
     { id: 4, name: '3D GPS Tracker', url: '/Projects/ThreeDGPS' },
     { id: 5, name: 'RaceTracker GPS', url: '/Projects/RaceTrackerGPS' },
-    { id: 6, name: 'Domestic Fire Risk Assesment Robot', url: '/Projects/FireRiskAssesment' },
+    { id: 6, name: 'Domestic Fire Risk Assessment Robot', url: '/Projects/FireRiskAssessment' },
     { id: 7, name: 'Physical GIF Generator', url: '/Projects/PhysicalGIF' },
     { id: 8, name: 'Reaction-Diffusion Art', url: '/Projects/ReactionDiffusion' },
     { id: 9, name: 'Mechanical Mirror', url: '/Projects/MechanicalMirror' },
