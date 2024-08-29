@@ -1,0 +1,78 @@
+/* ProjectBar.css */
+.project-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000;
+    padding: 1vw; /* Responsive padding */
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    /* Shadow above the bar with a gradient effect starting at pure black */
+    box-shadow: 0px -4px 5px rgba(0, 0, 0, 1),  /* Dark shadow with less blur */
+                0px -12px 15px rgba(0, 0, 0, 0.5), /* Lighter shadow */
+                0px -24px 20px rgba(0, 0, 0, 0.3); /* Even lighter shadow */
+}
+
+.project-bar-content {
+    display: flex;
+    justify-content: center; /* Center all content horizontally */
+    align-items: center; /* Center content vertically */
+    gap: 2vw; /* Responsive gap between "Similar Projects" and the buttons */
+    width: 100%; /* Make sure it takes the full width */
+}
+
+.similar-projects-title {
+    font-size: 2vw; /* Responsive font size */
+    margin: 0;
+    line-height: 1; /* Ensure text is centered vertically */
+    display: flex; /* Flexbox to center text vertically */
+    align-items: center; /* Center text vertically */
+}
+
+.project-buttons-container {
+    display: flex;
+    gap: 1.5vw; /* Responsive gap between buttons */
+    align-items: center; /* Center buttons vertically */
+    justify-content: center; /* Center buttons horizontally */
+}
+
+.project-button {
+    padding: 0.8vw 1.2vw; /* Responsive padding */
+    background-color: #ed6809;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 1.8vw; /* Responsive font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    display: flex;
+    align-items: center; /* Ensure button content is vertically centered */
+    text-decoration: none; /* Remove default link underline */
+    border-radius: 1vw; /* Responsive border radius */
+}
+
+/* Remove default link styles for all link states (unvisited, visited, hover, active) */
+.project-button:link,
+.project-button:visited,
+.project-button:hover,
+.project-button:active {
+    color: rgb(53, 229, 9); /* Set text color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Additional media query for very small screens */
+@media (max-width: 480px) {
+    .similar-projects-title {
+        font-size: 3vw;
+    }
+    .project-button {
+        font-size: 2.5vw;
+        border-radius: 1vw; /* Adjust border radius */
+    }
+    .project-buttons-container {
+        gap: 2.5vw;
+    }
+}
