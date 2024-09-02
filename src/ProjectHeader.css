@@ -1,20 +1,27 @@
-/* Define the project title font size as a fixed value */
+/* Define root variables for dynamic sizing */
 :root {
-    --project-title-font-size: 4vw; /* Adjust this value as needed */
+    --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
     --tag-margin: 1vw; /* Margin between tag list and title */
+    --min-title-font-size: 2rem; /* Minimum font size */
+    --max-title-font-size: 4rem; /* Maximum font size for large screens */
+    --min-container-height: 100px; /* Minimum height for containers */
+    --min-container-width: 200px; /* Minimum width for containers */
+    --line-height: 0.8; /* Default line height */
+    --title-below-dropdown: 25px; /* Distance below the dropdown widget */
 }
 
-/* Ensure the project title font size is consistently applied */
+/* General styles */
 .project-header .project-name-container .project-name {
     color: #ff7b00 !important;
-    font-size: var(--project-title-font-size) !important; /* Fixed font size */
+    font-size: clamp(var(--min-title-font-size), var(--project-title-font-size), var(--max-title-font-size)) !important;
+    line-height: var(--line-height); /* Default line height */
     margin: 0;
     z-index: 12;
     position: relative;
     background-color: rgba(0, 0, 0, 0);
+    text-align: center;
 }
 
-/* Adjust project header styling */
 .project-header {
     margin: 0;
     padding: 0;
@@ -23,16 +30,18 @@
     left: 0;
     width: 100%;
     z-index: 10;
+    min-height: var(--min-container-height); /* Minimum height for the header */
 }
 
 .project-header .top {
     background-color: black;
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the content horizontally */
     align-items: center;
     margin: 0;
     padding: 0;
     width: 100%;
+    min-height: 50px; /* Minimum height for the top section */
 }
 
 .project-header .left-quarter, 
@@ -60,42 +69,174 @@
     align-items: center;
 }
 
-/* Container for title and tags */
 .project-info-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally */
-    position: relative;
+    justify-content: center; /* Center horizontally within the container */
+    position: absolute; /* Absolute positioning for centering in viewport */
+    top: calc(50% + var(--title-below-dropdown)); /* Center vertically plus offset */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for exact horizontal center alignment */
     z-index: 11;
-    width: 100%; /* Full width to center children horizontally */
-    padding: 0 var(--tag-margin); /* Add padding to prevent tags from touching the edges */
+    min-width: var(--min-container-width); /* Minimum width for the info container */
+    min-height: var(--min-container-height); /* Minimum height for the info container */
 }
 
-/* Tag list settings */
+.project-info-container .tag-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center tags vertically within the container */
+    align-items: flex-end; /* Align tags to the right of the title */
+    margin-right: var(--tag-margin); /* Space between tag list and title */
+}
+
+.project-info-container .project-name-container {
+    display: flex;
+    flex-direction: row; /* Align title and tags horizontally */
+    align-items: center; /* Center vertically within the container */
+    justify-content: center; /* Center horizontally within the container */
+}
+
 .tag-list {
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center tags vertically within the container */
-    align-items: flex-start;
-    height: calc(var(--project-title-font-size) - var(--tag-margin)); /* Height based on title font size minus margin */
-    margin-right: var(--tag-margin); /* Space between tag list and title */
+    align-items: flex-end; /* Align tags to the right */
+    min-height: 50px; /* Minimum height for tag list */
 }
 
-/* Ensure tags fit within the height of the title font size */
 .tag {
     color: #525252;
-    font-size: calc(((var(--project-title-font-size) - (1 * var(--tag-margin)))/ 3) ); /* Tag font size */
+    font-size: calc(((var(--project-title-font-size) - (1 * var(--tag-margin))) / 3));
     text-align: left;
     margin-bottom: 0; /* Adjust spacing if needed */
     white-space: nowrap;
     background-color: transparent;
 }
 
-/* Title container */
 .project-name-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Align title and tags horizontally */
     justify-content: center;
     text-align: center;
+    position: relative;
 }
 
+/* Landscape Orientation */
+@media (orientation: landscape) {
+    :root {
+        --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
+        --tag-margin: 1vw; /* Margin between tag list and title */
+        --min-title-font-size: 2rem; /* Minimum font size */
+        --max-title-font-size: 4rem; /* Maximum font size for large screens */
+        --min-container-height: 100px; /* Minimum height for containers */
+        --min-container-width: 200px; /* Minimum width for containers */
+        --line-height: 0.8; /* Default line height */
+        --title-below-dropdown: 25px; /* Distance below the dropdown widget */
+    }
+
+    .project-header .project-name-container .project-name {
+        font-size: clamp(var(--min-title-font-size), var(--project-title-font-size), var(--max-title-font-size)) !important;
+    }
+    
+    @media (max-width: 768px) {
+        :root {
+            --project-title-font-size: calc(1.5rem + 1vw); /* Adjust for smaller screens */
+            --line-height: 1.1; /* Tighter line height for smaller screens */
+        }
+
+        .project-header {
+            min-height: 80px; /* Adjust for smaller screens */
+        }
+
+        .project-header .top {
+            min-height: 40px; /* Adjust for smaller screens */
+        }
+
+        .project-info-container {
+            padding: 0 1rem; /* Adjust padding for smaller screens */
+        }
+
+        .project-name {
+            font-size: 1.5rem; /* Ensure font size is readable on smaller screens */
+        }
+
+        .tag {
+            font-size: 0.8rem; /* Adjust tag font size for smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        :root {
+            --project-title-font-size: 3rem; /* Further adjustment for very small screens */
+            --line-height: 1.05; /* Even tighter line height for very small screens */
+        }
+
+        .project-header {
+            min-height: 60px; /* Further adjust for very small screens */
+        }
+
+        .project-info-container {
+            padding: 0 0.5rem; /* Further adjust padding for very small screens */
+        }
+    }
+}
+
+/* Portrait Orientation */
+@media (orientation: portrait) {
+    :root {
+        --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
+        --tag-margin: 1vw; /* Margin between tag list and title */
+        --min-title-font-size: 2rem; /* Minimum font size */
+        --min-container-height: 100px; /* Minimum height for containers */
+        --min-container-width: 200px; /* Minimum width for containers */
+        --line-height: 0.8; /* Default line height */
+        --title-below-dropdown: 25px; /* Distance below the dropdown widget */
+    }
+
+    .project-header .project-name-container .project-name {
+        font-size: min(var(--project-title-font-size), var(--min-title-font-size)) !important;
+    }
+
+    @media (max-width: 768px) {
+        :root {
+            --project-title-font-size: calc(1.5rem + 1vw); /* Adjust for smaller screens */
+            --line-height: 1.1; /* Tighter line height for smaller screens */
+        }
+
+        .project-header {
+            min-height: 80px; /* Adjust for smaller screens */
+        }
+
+        .project-header .top {
+            min-height: 40px; /* Adjust for smaller screens */
+        }
+
+        .project-info-container {
+            padding: 0 1rem; /* Adjust padding for smaller screens */
+        }
+
+        .project-name {
+            font-size: 1.5rem; /* Ensure font size is readable on smaller screens */
+        }
+
+        .tag {
+            font-size: 0.8rem; /* Adjust tag font size for smaller screens */
+        }
+    }
+
+    @media (max-width: 480px) {
+        :root {
+            --project-title-font-size: 3rem; /* Further adjustment for very small screens */
+            --line-height: 1.05; /* Even tighter line height for very small screens */
+        }
+
+        .project-header {
+            min-height: 60px; /* Further adjust for very small screens */
+        }
+
+        .project-info-container {
+            padding: 0 0.5rem; /* Further adjust padding for very small screens */
+        }
+    }
+}
