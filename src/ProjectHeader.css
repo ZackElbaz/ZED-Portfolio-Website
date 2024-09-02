@@ -1,0 +1,101 @@
+/* Define the project title font size as a fixed value */
+:root {
+    --project-title-font-size: 4vw; /* Adjust this value as needed */
+    --tag-margin: 1vw; /* Margin between tag list and title */
+}
+
+/* Ensure the project title font size is consistently applied */
+.project-header .project-name-container .project-name {
+    color: #ff7b00 !important;
+    font-size: var(--project-title-font-size) !important; /* Fixed font size */
+    margin: 0;
+    z-index: 12;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Adjust project header styling */
+.project-header {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.project-header .top {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.project-header .left-quarter, 
+.project-header .middle-half, 
+.project-header .right-quarter {
+    height: 100%;
+}
+
+.project-header .logo {
+    height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.project-header .dropdown-widget-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-header .right-quarter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for title and tags */
+.project-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center horizontally */
+    position: relative;
+    z-index: 11;
+    width: 100%; /* Full width to center children horizontally */
+    padding: 0 var(--tag-margin); /* Add padding to prevent tags from touching the edges */
+}
+
+/* Tag list settings */
+.tag-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center tags vertically within the container */
+    align-items: flex-start;
+    height: calc(var(--project-title-font-size) - var(--tag-margin)); /* Height based on title font size minus margin */
+    margin-right: var(--tag-margin); /* Space between tag list and title */
+}
+
+/* Ensure tags fit within the height of the title font size */
+.tag {
+    color: #525252;
+    font-size: calc(((var(--project-title-font-size) - (1 * var(--tag-margin)))/ 3) ); /* Tag font size */
+    text-align: left;
+    margin-bottom: 0; /* Adjust spacing if needed */
+    white-space: nowrap;
+    background-color: transparent;
+}
+
+/* Title container */
+.project-name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
