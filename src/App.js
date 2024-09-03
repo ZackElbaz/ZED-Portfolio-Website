@@ -20,7 +20,7 @@ function App() {
     <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/force-refresh" element={<ForceRefresh />} />
+        <Route path="/ForceRefresh" element={<ForceRefresh />} />
         <Route path="/Projects/LightbugRTK" element={<LightbugRTK />} />
         <Route path="/Projects/TKRTestDevice" element={<TKRTestDevice />} />
         <Route path="/Projects/BicycleAmbulance" element={<BicycleAmbulance />} />

@@ -1,3 +1,4 @@
+// Background.js
 import React, { useEffect, useRef } from "react";
 import StarfieldAnimation from "react-starfield-animation";
 

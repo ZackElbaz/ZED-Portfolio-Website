@@ -87,7 +87,7 @@
   border-radius: 0 0 var(--search-bar-radius) var(--search-bar-radius);
   box-shadow: 0px 20px 40px rgb(0, 0, 0);
   z-index: 1;
-  background-color: #ff000000;
+  background-color: #000000;
   font-size: var(--search-bar-font-size);
   max-height: var(--dropdown-number);
   overflow-y: auto;

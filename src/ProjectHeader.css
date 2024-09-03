@@ -1,4 +1,4 @@
-/* Define root variables for dynamic sizing */
+/* Define root variables for dynamic sizing and tag customization */
 :root {
     --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
     --tag-margin: 1vw; /* Margin between tag list and title */
@@ -8,6 +8,9 @@
     --min-container-width: 200px; /* Minimum width for containers */
     --line-height: 0.8; /* Default line height */
     --title-below-dropdown: 25px; /* Distance below the dropdown widget */
+    --tag-background-color: #f7f7f7; /* Default background color for tags */
+    --tag-text-color: #3b3b3b; /* Default text color for tags */
+    --tag-padding: 1px 5px; /* Padding inside the tag */
 }
 
 /* General styles */
@@ -34,7 +37,7 @@
 }
 
 .project-header .top {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     display: flex;
     justify-content: center; /* Center the content horizontally */
     align-items: center;
@@ -106,21 +109,44 @@
 }
 
 .tag {
-    color: #525252;
+    color: var(--tag-text-color);
     font-size: calc(((var(--project-title-font-size) - (1 * var(--tag-margin))) / 3));
     text-align: left;
-    margin-bottom: 0; /* Adjust spacing if needed */
+    margin-bottom: 0.3rem; /* Adjust spacing between tags */
     white-space: nowrap;
-    background-color: transparent;
+    background-color: var(--tag-background-color); /* Background color for tags */
+    padding: var(--tag-padding); /* Padding inside the tag */
+    border-radius: 50px; /* Pill-shaped box */
 }
 
-.project-name-container {
-    display: flex;
-    flex-direction: row; /* Align title and tags horizontally */
-    justify-content: center;
-    text-align: center;
+.left-quarter {
     position: relative;
+    z-index: 99999999;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end !important; /* Align content to the right */
+    align-items: center;
+    padding-right: 0px; /* Optional: Add some padding to the right for spacing */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
 }
+  
+.home-icon {
+    fill: white; /* Make the SVG icon white */
+    width: 50px; /* Increase the width */
+    height: 50px; /* Increase the height */
+    cursor: pointer; /* Change the cursor to pointer to indicate it's clickable */
+    transition: transform 0.2s; /* Add a slight animation on hover */
+}
+  
+.home-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon when hovered */
+    fill: #ff7b00; /* Make the SVG icon white */
+}
+  
+  
+  
+  
 
 /* Landscape Orientation */
 @media (orientation: landscape) {
@@ -132,7 +158,7 @@
         --min-container-height: 100px; /* Minimum height for containers */
         --min-container-width: 200px; /* Minimum width for containers */
         --line-height: 0.8; /* Default line height */
-        --title-below-dropdown: 25px; /* Distance below the dropdown widget */
+        --title-below-dropdown: 50px; /* Distance below the dropdown widget */
     }
 
     .project-header .project-name-container .project-name {
@@ -240,3 +266,4 @@
         }
     }
 }
+

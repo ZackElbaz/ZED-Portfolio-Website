@@ -1,19 +1,33 @@
 // Boeing737Seat.js
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import ProjectHeader from '../ProjectHeader';
 import ProjectBar from '../ProjectBar';
+import './ProjectInfoContainer.css'; // Import the shared CSS file
+import BlackBackground from '../BlackBackground'; // Import the new BlackBackground component
 
 function Boeing737Seat() {
+  const projectBarRef = useRef(null);
+  const [projectBarHeight, setProjectBarHeight] = useState(60); // Default height
+
+  useEffect(() => {
+    if (projectBarRef.current) {
+      setProjectBarHeight(projectBarRef.current.offsetHeight);
+    }
+  }, [projectBarRef.current]);
+
   const currentProject = "Boeing737Seat"; // Or dynamically set this
 
   return (
-    <div>
+    <div className="page-container">
+      <BlackBackground /> {/* Use BlackBackground component here */}
       <ProjectHeader currentProject={currentProject} />
       
-      <h1>Welcome to the Boeing737Seat test page!</h1>
-      <p>This is the content of your Boeing737Seat.</p>
-      
-      <ProjectBar currentProject={currentProject} />
+      {/* Project Content */}
+      <div className="project-info-box" style={{ bottom: `${projectBarHeight}px` }}>
+        <p>This is some additional information about the Bicycle Ambulance project...</p>
+      </div>
+
+      <ProjectBar currentProject={currentProject} ref={projectBarRef} />
     </div>
   );
 }
