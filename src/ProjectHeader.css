@@ -8,8 +8,8 @@
     --min-container-width: 200px; /* Minimum width for containers */
     --line-height: 0.8; /* Default line height */
     --title-below-dropdown: 25px; /* Distance below the dropdown widget */
-    --tag-background-color: #f7f7f7; /* Default background color for tags */
-    --tag-text-color: #3b3b3b; /* Default text color for tags */
+    --tag-background-color: #595959; /* Default background color for tags */
+    --tag-text-color: #e5e5e5; /* Default text color for tags */
     --tag-padding: 1px 5px; /* Padding inside the tag */
 }
 
@@ -158,7 +158,7 @@
         --min-container-height: 100px; /* Minimum height for containers */
         --min-container-width: 200px; /* Minimum width for containers */
         --line-height: 0.8; /* Default line height */
-        --title-below-dropdown: 50px; /* Distance below the dropdown widget */
+        --title-below-dropdown: 40px; /* Distance below the dropdown widget */
     }
 
     .project-header .project-name-container .project-name {
@@ -213,7 +213,7 @@
     :root {
         --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
         --tag-margin: 1vw; /* Margin between tag list and title */
-        --min-title-font-size: 2rem; /* Minimum font size */
+        --min-title-font-size: 1.75rem; /* Minimum font size */
         --min-container-height: 100px; /* Minimum height for containers */
         --min-container-width: 200px; /* Minimum width for containers */
         --line-height: 0.8; /* Default line height */

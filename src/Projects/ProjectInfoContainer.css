@@ -50,3 +50,23 @@
     background-color: #cdcdcd; /* Background color of the scrollbar track */
     border-radius: 8px; /* Rounded corners for the scrollbar track */
 }
+
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Stack images vertically in portrait mode */
+    gap: 10px; /* Space between images */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (orientation: landscape) {
+    .image-container {
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Distribute images evenly in landscape mode */
+    }
+  }
+  
+  
