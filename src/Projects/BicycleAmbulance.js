@@ -149,29 +149,48 @@ function BicycleAmbulance() {
       
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarHeight}px` }}>
-        <p>In a pair, I designed a trailer, that can be attached to standard bikes, and is capable of safely and comfortably expediting the transport of a person in need of medical attention in the harsh environment of Sub-Saharan Africa. 
-        <div className="image-container">
-          <img src={Picture1} alt="Heat dissipation calculation" />
-          <img src={Picture2} alt="Heat dissipation calculation" />
-          <img src={Picture3} alt="Heat dissipation calculation" />
-          <img src={Picture4} alt="Heat dissipation calculation" />
+        <div className="image-wrapper">
+          <img src={ProjectImage} alt="Project" style={{float: 'left', marginLeft: '15px', maxWidth: '35%',height: 'auto'}}/>
+          In a pair, I designed a trailer, that can be attached to standard bikes, and is capable of safely and comfortably expediting the transport of a person in need of medical attention in the harsh environment of Sub-Saharan Africa.
+          <p>
+          <div className="image-container">
+            <img src={Picture1} alt="Heat dissipation calculation" />
+            <img src={Picture2} alt="Heat dissipation calculation" />
+          </div>
+          <div className="image-container">
+            <img src={Picture3} alt="Heat dissipation calculation" />
+            <img src={Picture4} alt="Heat dissipation calculation" />
+          </div>
+          </p>
         </div>
+        <p> 
+        
+        </p>
+        <p>Some of the design's key features are:
+        <ul>
         <li>Vaccine cooler (whose heat dissipation was calculated using MATLAB and can be seen to the right).</li>
         <li>Enough storage to support the provision of an ad hoc clinic at remote locations. </li>
         <li>The design has countermeasures for location specific eventualities such as the exposure of the patient to heatstroke, rain, dust and mosquitoes.</li> 
-        <li>Economic feasibility was extremely important, as the trailer had to be designed to compete in a very low cost market.</li></p>
+        <li>Economic feasibility was extremely important, as the trailer had to be designed to compete in a very low cost market.</li>
+        </ul>
+        </p>
+        
+        <p> Below are some results of heat dissipation tests run in MATLAB:
         <div className="image-container">
           <img src={Heat1} alt="Heat dissipation calculation" />
           <img src={Heat2} alt="Heat dissipation calculation" />
           <img src={Heat3} alt="Heat dissipation calculation" />
         </div>
+        </p>
         <img src={DetailedDesign} alt="Project" style={{ width: '100%', height: 'auto' }} />
         <p>
+        <ul>
         <li>I created all the CAD models (using Autodesk Inventor).</li>
         <li>The trailer was designed to be easily and cheaply manufactured using sheet metal whilst remaining extremely light.</li>
         <li>Using as few components as possible, assembly is made not only easy but also cheap.</li>
         <li>This design has many features (explained on the left), but operation of the trailer was ensured to be as rapid as possible in case it needed to be used in an emergency situation.</li>
         <li>With a detachable stretcher and foldable cover, the process of transporting a patient has become exceptionally streamlined, while remaining hygienic and safe for both the patient and rider.</li>
+        </ul>
         </p>
         <p>
         <img src={BicycleTrailer} alt="Project" style={{ width: '80%', height: 'auto', display: 'block', marginLeft: 'auto', marginRight: 'auto' }} />

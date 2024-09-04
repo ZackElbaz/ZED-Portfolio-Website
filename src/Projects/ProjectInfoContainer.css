@@ -51,22 +51,55 @@
     border-radius: 8px; /* Rounded corners for the scrollbar track */
 }
 
+/* Style for list items within project-info-box */
+.project-info-box ul {
+    padding-left: 5vw; /* Offset the bullet points from the left */
+}
+
+.project-info-box li {
+    margin-bottom: 0px; /* Space between list items */
+}
 
 .image-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Stack images vertically in portrait mode */
     gap: 10px; /* Space between images */
-  }
-  
-  .image-container img {
+}
+
+.image-container img {
     width: 100%;
     height: auto;
-  }
-  
-  @media (orientation: landscape) {
+}
+
+/* Float-based image wrapping */
+.image-wrapper {
+    overflow: hidden; /* Ensure container clears floated content */
+    margin-bottom: 20px; /* Space below the image and text */
+}
+
+.image-wrapper img {
+    float: left; /* Float image to the left */
+    margin-right: 15px; /* Space between image and text */
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* For image on the right */
+.image-wrapper img.right {
+    float: right; /* Float image to the right */
+    margin-left: 15px; /* Space between image and text */
+}
+
+
+@media (orientation: landscape) {
     .image-container {
-      grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Distribute images evenly in landscape mode */
+        grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Distribute images evenly in landscape mode */
+        align-items: center; /* Center images vertically in the row */
+        justify-content: center; /* Center images horizontally in the container */
     }
-  }
-  
+    .project-info-box {
+        font-size: 25px !important; /* Increase font size in landscape mode */
+    }
+}
+
   

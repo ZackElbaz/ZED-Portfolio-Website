@@ -1,3 +1,4 @@
+//HomePage.js
 import React, { useState, useEffect} from 'react';
 import './HomePage.css';
 import Background from './Background';

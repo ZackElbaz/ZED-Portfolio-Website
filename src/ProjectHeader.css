@@ -11,6 +11,8 @@
     --tag-background-color: #595959; /* Default background color for tags */
     --tag-text-color: #e5e5e5; /* Default text color for tags */
     --tag-padding: 1px 5px; /* Padding inside the tag */
+    --date-background-color: #ff7b00; /* Background color for the date pill */
+    --date-text-color: #000000; /* Text color for the date pill */
 }
 
 /* General styles */
@@ -145,7 +147,18 @@
 }
   
   
-  
+.project-date {
+    color: var(--date-text-color); /* Text color for the date pill */
+    background-color: var(--date-background-color); /* Background color for the date pill */
+    font-size: calc((((var(--project-title-font-size) - (1 * var(--tag-margin))) / 3))* 0.75);
+    padding: 0em 0.2em;
+    border-radius: 50px; /* Pill-shaped box */
+    margin-left: 0em; /* Space between project name and date */
+    white-space: nowrap;
+    transform: translateX(-1em) rotate(-90deg) ; /* Rotate the date 90 degrees counterclockwise */
+    transform-origin: middle; /* Adjust the origin of the transformation */
+    font-weight: bold;
+}
   
 
 /* Landscape Orientation */
@@ -266,4 +279,3 @@
         }
     }
 }
-

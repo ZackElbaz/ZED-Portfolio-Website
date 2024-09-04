@@ -1,3 +1,4 @@
+/* HomePage.css */
 :root {
     --search-bar-width: 90%;
     --search-bar-height: 80px; /* Default height */
@@ -101,6 +102,7 @@
   .icon {
     height: 40px; /* Adjust this value as needed */
     filter: invert(1); /* Inverts the color, making black SVGs white */
+    transition: transform 0.2s;
   }
   
   .icon:hover {
@@ -111,7 +113,7 @@
   
   
   .icon-container:hover .icon {
-    transform: scale(1); /* Shrink the icon on hover */
+    transform: scale(1.2);
   }
   
   .icon-container {

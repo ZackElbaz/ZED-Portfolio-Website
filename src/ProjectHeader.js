@@ -175,6 +175,7 @@ function ProjectHeader({ currentProject }) {
         </div>
         <div className="project-name-container">
           <h1 className="project-name">{project?.displayName}</h1>
+          {project?.date && <span className="project-date">{project.date}</span>}
         </div>
       </div>
     </div>
