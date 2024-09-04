@@ -1,17 +1,26 @@
 {
   "files": {
-    "main.css": "/ZED-Portfolio-Website/static/css/main.ee73fbd4.css",
-    "main.js": "/ZED-Portfolio-Website/static/js/main.f722ce1e.js",
+    "main.css": "/ZED-Portfolio-Website/static/css/main.3482c6fc.css",
+    "main.js": "/ZED-Portfolio-Website/static/js/main.b92e86fc.js",
     "static/js/453.f5f8e440.chunk.js": "/ZED-Portfolio-Website/static/js/453.f5f8e440.chunk.js",
+    "static/media/BicycleTrailer.png": "/ZED-Portfolio-Website/static/media/BicycleTrailer.d2a9c37829ecedc9348a.png",
+    "static/media/DetailedDesign.jpg": "/ZED-Portfolio-Website/static/media/DetailedDesign.d15a7017b22b1352219f.jpg",
+    "static/media/Picture4.png": "/ZED-Portfolio-Website/static/media/Picture4.bf8138441b40c45790a0.png",
+    "static/media/ProjectImage.jpg": "/ZED-Portfolio-Website/static/media/ProjectImage.4b52546028cb6eea6915.jpg",
+    "static/media/Heat3.jpg": "/ZED-Portfolio-Website/static/media/Heat3.3d6f4f30d69b8bd78122.jpg",
+    "static/media/Heat2.jpg": "/ZED-Portfolio-Website/static/media/Heat2.4cbff3d303c3765edecc.jpg",
+    "static/media/Heat1.jpg": "/ZED-Portfolio-Website/static/media/Heat1.cd275a7f40eed3b96557.jpg",
     "static/media/DropdownArrowSVG.svg": "/ZED-Portfolio-Website/static/media/DropdownArrowSVG.95b3214870eee923803c.svg",
+    "static/media/Picture3.jpg": "/ZED-Portfolio-Website/static/media/Picture3.89ddd626935f80f7670b.jpg",
+    "static/media/Picture2.jpg": "/ZED-Portfolio-Website/static/media/Picture2.e405c50b661cc20e97c1.jpg",
     "index.html": "/ZED-Portfolio-Website/index.html",
     "static/media/HomeSVG.svg": "/ZED-Portfolio-Website/static/media/HomeSVG.9d2cf0db1e05d14948ef3b5e22b13b34.svg",
-    "main.ee73fbd4.css.map": "/ZED-Portfolio-Website/static/css/main.ee73fbd4.css.map",
-    "main.f722ce1e.js.map": "/ZED-Portfolio-Website/static/js/main.f722ce1e.js.map",
+    "main.3482c6fc.css.map": "/ZED-Portfolio-Website/static/css/main.3482c6fc.css.map",
+    "main.b92e86fc.js.map": "/ZED-Portfolio-Website/static/js/main.b92e86fc.js.map",
     "453.f5f8e440.chunk.js.map": "/ZED-Portfolio-Website/static/js/453.f5f8e440.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee73fbd4.css",
-    "static/js/main.f722ce1e.js"
+    "static/css/main.3482c6fc.css",
+    "static/js/main.b92e86fc.js"
   ]
 }
