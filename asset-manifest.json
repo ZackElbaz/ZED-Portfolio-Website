@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ZED-Portfolio-Website/static/css/main.703691a8.css",
-    "main.js": "/ZED-Portfolio-Website/static/js/main.dea51964.js",
+    "main.css": "/ZED-Portfolio-Website/static/css/main.0ceddaec.css",
+    "main.js": "/ZED-Portfolio-Website/static/js/main.1f8ff54a.js",
     "static/js/453.f5f8e440.chunk.js": "/ZED-Portfolio-Website/static/js/453.f5f8e440.chunk.js",
     "static/media/BicycleTrailer.png": "/ZED-Portfolio-Website/static/media/BicycleTrailer.d2a9c37829ecedc9348a.png",
     "static/media/DetailedDesign.jpg": "/ZED-Portfolio-Website/static/media/DetailedDesign.d15a7017b22b1352219f.jpg",
@@ -15,12 +15,12 @@
     "static/media/Picture2.jpg": "/ZED-Portfolio-Website/static/media/Picture2.e405c50b661cc20e97c1.jpg",
     "index.html": "/ZED-Portfolio-Website/index.html",
     "static/media/HomeSVG.svg": "/ZED-Portfolio-Website/static/media/HomeSVG.9d2cf0db1e05d14948ef3b5e22b13b34.svg",
-    "main.703691a8.css.map": "/ZED-Portfolio-Website/static/css/main.703691a8.css.map",
-    "main.dea51964.js.map": "/ZED-Portfolio-Website/static/js/main.dea51964.js.map",
+    "main.0ceddaec.css.map": "/ZED-Portfolio-Website/static/css/main.0ceddaec.css.map",
+    "main.1f8ff54a.js.map": "/ZED-Portfolio-Website/static/js/main.1f8ff54a.js.map",
     "453.f5f8e440.chunk.js.map": "/ZED-Portfolio-Website/static/js/453.f5f8e440.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.703691a8.css",
-    "static/js/main.dea51964.js"
+    "static/css/main.0ceddaec.css",
+    "static/js/main.1f8ff54a.js"
   ]
 }
