@@ -5,7 +5,8 @@ import Background from './Background';
 import DropdownWidget from './DropdownWidget';
 import VisitorCounter from './VisitorCounter';
 import StarfieldAnimation from 'react-starfield-animation'; // Assuming you've installed this library
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { projects } from './projectsData';
 
 // KEEP THESE HERE AS THEY WILL BE USEFUL TO ME IN THE FUTURE
 //import { Link } from 'react-router-dom';
@@ -23,6 +24,7 @@ function HomePage() {
     const [bottomSectionHeightPercent, setBottomSectionHeightPercent] = useState(15);
     const [contactMeRowHeightPercent, setContactMeRowHeightPercent] = useState(30);
     
+    const navigate = useNavigate();
     const location = useLocation();
 
     useEffect(() => {
@@ -40,7 +42,15 @@ function HomePage() {
       };
     }, []);
 
+    // Sort projects by most recent date and grab the top 3
+    const sortedProjects = projects
+        .sort((a, b) => b.date - a.date) // Sort by date (newest first)
+        .slice(0, 3); // Get the three most recent projects
 
+    // Handle navigation when a section is clicked
+    const handleProjectClick = (projectName) => {
+        navigate(`/Projects/${projectName}`);
+    };
 
     const topAspectRatio = 4 / 3;
     const topInitialHeight = 100;
@@ -105,7 +115,48 @@ function HomePage() {
             <div className="middle" style={{ height: `${middleHeight}px`, width: windowSize.width }}>
               <div className="buffer"></div>
               <div className="rectangle-buffer">
-                <div className="rectangle"></div>
+                <div className="rectangle">
+                  {/* Three sections inside the rectangle */}
+                  <div 
+                    className="section section-1" 
+                    onClick={() => handleProjectClick(sortedProjects[0].name)}
+                    style={{
+                      backgroundImage: `url(${sortedProjects[0].imagePath})`, // Set project image
+                      backgroundSize: 'cover', // Make sure image covers the section
+                      backgroundPosition: 'center', // Center the image
+                      position: 'relative', // Allow positioning of text
+                    }}
+                  >
+                    {/* Project Title (In front of the image) */}
+                    <div className="project-title-overlay">{sortedProjects[0].displayName}</div>
+                  </div>
+
+                  <div 
+                    className="section section-2" 
+                    onClick={() => handleProjectClick(sortedProjects[1].name)}
+                    style={{
+                      backgroundImage: `url(${sortedProjects[1].imagePath})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      position: 'relative',
+                    }}
+                  >
+                    <div className="project-title-overlay">{sortedProjects[1].displayName}</div>
+                  </div>
+
+                  <div 
+                    className="section section-3" 
+                    onClick={() => handleProjectClick(sortedProjects[2].name)}
+                    style={{
+                      backgroundImage: `url(${sortedProjects[2].imagePath})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      position: 'relative',
+                    }}
+                  >
+                    <div className="project-title-overlay">{sortedProjects[2].displayName}</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="bottom" style={{ height: `${bottomHeightPercent}px`, width: windowSize.width }}>

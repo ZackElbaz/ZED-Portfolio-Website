@@ -1,135 +1,238 @@
 /* HomePage.css */
 :root {
-    --search-bar-width: 90%;
-    --search-bar-height: 80px; /* Default height */
-    --starfield-background-color: #000000; /* Define custom CSS variable */
-  }
-  
-  .app {
-    position: relative;
-  }
-  
-  .content {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .top, .middle, .bottom {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .top, .middle, .bottom {
-    background-color: var(--background-color);
-  }
-  
-  .top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .middle {
-    flex-grow: 1;
-    position: relative; /* Ensure position context for absolute positioning */
-  }
-  
-  .buffer {
-    flex-grow: 1; /* Take up remaining space */
-  }
-  
-  .rectangle-buffer {
-    position: absolute;
-    top: 20px; /* Adjust top buffer */
-    left: 20px; /* Adjust left buffer */
-    right: 20px; /* Adjust right buffer */
-    bottom: 20px; /* Adjust bottom buffer */
-  }
-  
+  --search-bar-width: 90%;
+  --search-bar-height: 80px; /* Default height */
+  --starfield-background-color: #000000; /* Define custom CSS variable */
+}
+
+.app {
+  position: relative;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.top, .middle, .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top, .middle, .bottom {
+  background-color: var(--background-color);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.middle {
+  flex-grow: 1;
+  position: relative; /* Ensure position context for absolute positioning */
+}
+
+.buffer {
+  flex-grow: 1; /* Take up remaining space */
+}
+
+.rectangle-buffer {
+  position: absolute;
+  top: 20px; /* Adjust top buffer */
+  left: 20px; /* Adjust left buffer */
+  right: 20px; /* Adjust right buffer */
+  bottom: 20px; /* Adjust bottom buffer */
+}
+
+.rectangle {
+  display: flex;
+  flex-direction: column; /* Default layout: stack vertically */
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  background-color: var(--rectangle-color, rgba(0, 0, 0, 0.384));
+  border: 0px solid var(--border-color, #ffffff);
+}
+/* Overlay effect */
+.section::before {
+content: ""; /* Required for pseudo-element */
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(50, 50, 50, 0.267); /* Greyed-out background */
+z-index: 1; /* Place overlay above the image but below the text */
+transition: background-color 0.3s ease; /* Transition for overlay color */
+}
+.section {
+  flex: 1; /* Ensure each section takes up equal space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 255, 255); /* Optional: Add a border to each section */
+  cursor: pointer;
+  color: rgb(255, 255, 255); /* Text color */
+  font-size: 8vw;
+  font-weight: bold; /* Make the text bold */
+  text-align: center; /* Center text alignment */
+  padding: 1vw; /* Add padding to provide buffer around text */
+  box-sizing: border-box; /* Include padding in the width and height calculations */
+  transition: background-color 0.3s ease;
+  position: relative; /* For positioning the text shadow */
+}
+
+
+/* Add text shadow for outline effect */
+.section .project-title-overlay {
+  z-index: 2; /* Higher z-index than the ::before pseudo-element */
+text-shadow: 
+  4px 4px 4px rgba(0, 0, 0, 5), /* Horizontal, Vertical, Blur, Color */
+  -4px -4px 4px rgba(0, 0, 0, 0.5), 
+  4px -4px 4px rgba(0, 0, 0, 0.5),
+  -4px 4px 4px rgba(0, 0, 0, 0.5);
+transition: transform 0.2s;
+}
+/* Hover effect */
+.section:hover::before {
+background-color: rgba(255, 255, 255, 0); /* Lighter overlay on hover */
+}
+/* Hover effect */
+.section:hover {
+background-color: rgb(115, 255, 0); /* Change background on hover */
+color: #ff7300; /* Change text color on hover */
+}
+.section:hover .project-title-overlay {
+transform: scale(1.05); /* Scale text only on hover */
+}
+/* Rounded corners for vertical stacking (portrait mode) */
+.section-1 {
+border-top-left-radius: 40px;
+border-top-right-radius: 40px;
+}
+
+.section-3 {
+border-bottom-left-radius: 40px;
+border-bottom-right-radius: 40px;
+}
+
+
+
+/* Rounded corners for horizontal arrangement (landscape mode) */
+@media (min-aspect-ratio: 4/3) {
+.rectangle {
+  flex-direction: row;
+}
+.section {
+  font-size: 3vw; /* Larger font size for portrait mode */
+}
+
+/* First section: rounded left corners */
+.section-1 {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Last section: rounded right corners */
+.section-3 {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Middle section has no rounded corners */
+.section-2 {
+  border-radius: 0;
+}
+}
+
+@media (max-aspect-ratio: 4/3) {
+  /* Portrait: Display sections stacked vertically (default) */
   .rectangle {
-    width: 100%;
-    height: 100%;
-    border-radius: 40px; /* Adjust border radius as needed */
-    background-color: var(--rectangle-color, rgba(0, 0, 0, 0.384)); /* Default color */
-    border: 2px solid var(--border-color, #ffffff); /* Adjust border width and color */
-  }
-  
-  .bottom {
-    display: flex;
     flex-direction: column;
-    color: rgb(255, 255, 255); /* Set the color to white */
   }
-  
-  .contact-me-row, .links-row {
-    width: 100%;
-    text-align: center;
-    color: #ff7300; /* Set the color to white */
-  }
-  
-  .links-row div {
-    flex: 1;
-  }
-  
-  .search-bar {
-    width: var(--search-bar-width); /* Adjust width of search bar */
-    height: var(--search-bar-height); /* Adjust height of search bar */
-    padding: 10px; /* Add padding for better appearance */
-    border-radius: 5px; /* Add rounded corners */
-    border: 2px solid #ffffff; /* Add border */
-    font-size: 16px; /* Set font size */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    /* Add any other custom styles you want */
-  }
-  
-  /* Customize placeholder text color */
-  .search-bar::placeholder {
-    color: #ffffff; /* Adjust placeholder text color */
-  }
-  
-  
-  .linkedin-container, .email-container, .location-container, .cv-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .linkedin-container a, .email-container a, .location-container a, .cv-container a {
-    text-decoration: none; /* Remove underline from the hyperlink */
-  }
-  
-  
-  .icon {
-    height: 40px; /* Adjust this value as needed */
-    filter: invert(1); /* Inverts the color, making black SVGs white */
-    transition: transform 0.2s;
-  }
-  
-  .icon:hover {
-    filter: invert(0.6); /* Optional: slightly different color on hover */
-  }
-  
-  
-  
-  
-  .icon-container:hover .icon {
-    transform: scale(1.2);
-  }
-  
-  .icon-container {
-    position: relative; /* Ensure relative positioning for absolute children */
-  }
-  
-  .text {
-    display: none; /* Initially hide the text */
-    color: #ff7300; /* Set text color to orange */
-    position: absolute; /* Position the text absolutely */
-    bottom: -20px; /* Adjust the distance from the icon */
-    left: 50%; /* Center the text horizontally */
-    transform: translateX(-50%); /* Center the text horizontally */
-  }
-  
-  .icon-container:hover .text {
-    display: block; /* Show the text on hover */
-  }
-  
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255); /* Set the color to white */
+}
+
+.contact-me-row, .links-row {
+  width: 100%;
+  text-align: center;
+  color: #ff7300; /* Set the color to white */
+}
+
+.links-row div {
+  flex: 1;
+}
+
+.search-bar {
+  width: var(--search-bar-width); /* Adjust width of search bar */
+  height: var(--search-bar-height); /* Adjust height of search bar */
+  padding: 10px; /* Add padding for better appearance */
+  border-radius: 5px; /* Add rounded corners */
+  border: 2px solid #ffffff; /* Add border */
+  font-size: 16px; /* Set font size */
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+  /* Add any other custom styles you want */
+}
+
+/* Customize placeholder text color */
+.search-bar::placeholder {
+  color: #ffffff; /* Adjust placeholder text color */
+}
+
+
+.linkedin-container, .email-container, .location-container, .cv-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.linkedin-container a, .email-container a, .location-container a, .cv-container a {
+  text-decoration: none; /* Remove underline from the hyperlink */
+}
+
+
+.icon {
+  height: 40px; /* Adjust this value as needed */
+  filter: invert(1); /* Inverts the color, making black SVGs white */
+  transition: transform 0.2s;
+}
+
+.icon:hover {
+  filter: invert(0.6); /* Optional: slightly different color on hover */
+}
+
+
+
+
+.icon-container:hover .icon {
+  transform: scale(1.2);
+}
+
+.icon-container {
+  position: relative; /* Ensure relative positioning for absolute children */
+}
+
+.text {
+  display: none; /* Initially hide the text */
+  color: #ff7300; /* Set text color to orange */
+  position: absolute; /* Position the text absolutely */
+  bottom: -20px; /* Adjust the distance from the icon */
+  left: 50%; /* Center the text horizontally */
+  transform: translateX(-50%); /* Center the text horizontally */
+}
+
+.icon-container:hover .text {
+  display: block; /* Show the text on hover */
+}

@@ -11,8 +11,8 @@
     --tag-background-color: #595959; /* Default background color for tags */
     --tag-text-color: #e5e5e5; /* Default text color for tags */
     --tag-padding: 1px 5px; /* Padding inside the tag */
-    --date-background-color: #ff7b00; /* Background color for the date pill */
-    --date-text-color: #000000; /* Text color for the date pill */
+    --date-background-color: #696969; /* Background color for the date pill */
+    --date-text-color: #ffffff; /* Text color for the date pill */
 }
 
 /* General styles */
@@ -91,7 +91,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center tags vertically within the container */
-    align-items: flex-end; /* Align tags to the right of the title */
+    align-items: flex-start; /* Align tags to the right of the title */
     margin-right: var(--tag-margin); /* Space between tag list and title */
 }
 
@@ -106,7 +106,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center tags vertically within the container */
-    align-items: flex-end; /* Align tags to the right */
+    align-items: flex-start; /* Align tags to the right */
     min-height: 50px; /* Minimum height for tag list */
 }
 
@@ -119,6 +119,7 @@
     background-color: var(--tag-background-color); /* Background color for tags */
     padding: var(--tag-padding); /* Padding inside the tag */
     border-radius: 50px; /* Pill-shaped box */
+    transform: translate(2em);
 }
 
 .left-quarter {
@@ -155,7 +156,7 @@
     border-radius: 50px; /* Pill-shaped box */
     margin-left: 0em; /* Space between project name and date */
     white-space: nowrap;
-    transform: translateX(-1em) rotate(-90deg) ; /* Rotate the date 90 degrees counterclockwise */
+    transform: translateX(1em) rotate(-90deg) ; /* Rotate the date 90 degrees counterclockwise */
     transform-origin: middle; /* Adjust the origin of the transformation */
     font-weight: bold;
 }

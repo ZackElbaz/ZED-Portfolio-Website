@@ -2,7 +2,8 @@
 // import { Link } from 'react-router-dom';
 // import './ProjectHeader.css';
 // import DropdownWidget from './DropdownWidget';
-// import { projects } from './projectsData'; // Import the project data
+// import { projects } from './projectsData';
+// import { ReactComponent as HomeIcon } from './Assets/HomeSVG.svg'; // Import the SVG
 
 // function ProjectHeader({ currentProject }) {
 //   const [windowSize, setWindowSize] = useState({
@@ -55,9 +56,9 @@
 //     <div className="project-header">
 //       <div className="top" style={{ height: `${topHeight}px`, width: `${windowSize.width}px`, margin: `${bufferHeight}px auto 0 auto`, position: 'relative' }}>
 //         <div className="left-quarter" style={{ height: '100%', width: `${leftWidthPercent}%`, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-//         <Link to="../ForceRefresh">
-//           <button>Go to Home Page</button>
-//         </Link>
+//           <Link to="../ForceRefresh">
+//             <HomeIcon className="home-icon" /> {/* Use the SVG here */}
+//           </Link>
 //         </div>
 //         <div className="middle-half" style={{ height: `${topHeight}px`, width: `${middleWidthPercent}%`, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
 //           <div className="dropdown-widget-container" style={{ width: `${middleWidthPercent}%` }}>
@@ -82,6 +83,7 @@
 //         </div>
 //         <div className="project-name-container">
 //           <h1 className="project-name">{project?.displayName}</h1>
+//           {project?.date && <span className="project-date">{project.date}</span>}
 //         </div>
 //       </div>
 //     </div>
@@ -89,6 +91,15 @@
 // }
 
 // export default ProjectHeader;
+
+
+
+
+
+
+
+
+
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -144,6 +155,12 @@ function ProjectHeader({ currentProject }) {
 
   document.documentElement.style.setProperty('--search-bar-width', `${middleWidth}px`);
 
+  // Format the date if available
+  const formattedDate = project?.date
+    ? project.date.toLocaleDateString('en-US', { year: 'numeric', month: 'short' }) // Example: "Aug 2024"
+    : '';
+
+
   return (
     <div className="project-header">
       <div className="top" style={{ height: `${topHeight}px`, width: `${windowSize.width}px`, margin: `${bufferHeight}px auto 0 auto`, position: 'relative' }}>
@@ -168,16 +185,17 @@ function ProjectHeader({ currentProject }) {
       </div>
 
       <div className="project-info-container">
-        <div className="tag-list">
-          {selectedTags.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
-          ))}
-        </div>
         <div className="project-name-container">
-          <h1 className="project-name">{project?.displayName}</h1>
-          {project?.date && <span className="project-date">{project.date}</span>}
+            {formattedDate && <span className="project-date">{formattedDate}</span>}
+            <h1 className="project-name">{project?.displayName}</h1>
+            
         </div>
-      </div>
+        <div className="tag-list">
+            {selectedTags.map((tag, index) => (
+            <span key={index} className="tag">{tag}</span>
+            ))}
+        </div>
+    </div>
     </div>
   );
 }
