@@ -60,10 +60,11 @@
     margin-bottom: 0px; /* Space between list items */
 }
 
+/* Style for images in .image-container */
 .image-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* Stack images vertically in portrait mode */
-    gap: 10px; /* Space between images */
+    display: flex; /* Align images in a row */
+    gap: 10px; /* 10px gap between images */
+    margin-bottom: 20px; /* Margin below each image container for spacing */
 }
 
 .image-container img {
@@ -90,16 +91,24 @@
     margin-left: 15px; /* Space between image and text */
 }
 
-
+.centered-image {
+    display: block; /* Ensures the image behaves like a block element */
+    margin-left: auto; /* Auto margin on the left */
+    margin-right: auto; /* Auto margin on the right */
+    max-width: 100%; /* Ensure it does not exceed container width */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
 @media (orientation: landscape) {
     .image-container {
-        grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Distribute images evenly in landscape mode */
-        align-items: center; /* Center images vertically in the row */
-        justify-content: center; /* Center images horizontally in the container */
+      grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); /* Distribute images evenly in landscape mode */
+      align-items: center; /* Center images vertically in the row */
+      justify-content: center; /* Center images horizontally in the container */
     }
+  
     .project-info-box {
-        font-size: 25px !important; /* Increase font size in landscape mode */
+      font-size: 25px !important; /* Increase font size in landscape mode */
     }
-}
-
+  }
+  
   

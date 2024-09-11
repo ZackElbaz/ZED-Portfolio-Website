@@ -9,10 +9,10 @@ export const projects = [
     },
     {
     name: 'Boeing737Seat', 
-    displayName: 'Boeing 737 Seat', 
+    displayName: 'Boeing 777-300 Seat', 
     tags: ['Aviation', 'University'], 
     date: new Date('June 2024'),
-    imagePath: require('./Projects/BicycleAmbulanceImages/Heat3.jpg')
+    imagePath: require('./Projects/Boeing737SeatImages/ExplodedView.png')
     },
     { 
     name: 'ColouredHalftone', 
