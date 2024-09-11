@@ -1,26 +1,37 @@
 {
   "files": {
-    "main.css": "/ZED-Portfolio-Website/static/css/main.0ceddaec.css",
-    "main.js": "/ZED-Portfolio-Website/static/js/main.1f8ff54a.js",
+    "main.css": "/ZED-Portfolio-Website/static/css/main.254d8165.css",
+    "main.js": "/ZED-Portfolio-Website/static/js/main.9eff9f53.js",
     "static/js/453.f5f8e440.chunk.js": "/ZED-Portfolio-Website/static/js/453.f5f8e440.chunk.js",
     "static/media/BicycleTrailer.png": "/ZED-Portfolio-Website/static/media/BicycleTrailer.d2a9c37829ecedc9348a.png",
+    "static/media/ExplodedView.png": "/ZED-Portfolio-Website/static/media/ExplodedView.cc6a68a18f49f669fef2.png",
     "static/media/DetailedDesign.jpg": "/ZED-Portfolio-Website/static/media/DetailedDesign.d15a7017b22b1352219f.jpg",
     "static/media/Picture4.png": "/ZED-Portfolio-Website/static/media/Picture4.bf8138441b40c45790a0.png",
+    "static/media/Final Render.png": "/ZED-Portfolio-Website/static/media/Final Render.c806d3f2a337543132ca.png",
+    "static/media/Exploded Parts View.png": "/ZED-Portfolio-Website/static/media/Exploded Parts View.0e5ed04560bec0b93d7d.png",
+    "static/media/Base Development.png": "/ZED-Portfolio-Website/static/media/Base Development.ca5c4ba964f5338a92f4.png",
+    "static/media/Final Design Sketch.png": "/ZED-Portfolio-Website/static/media/Final Design Sketch.36a4f4807b5ce121e566.png",
+    "static/media/Concept Design 1.png": "/ZED-Portfolio-Website/static/media/Concept Design 1.e9fb28c92ced421f0c65.png",
+    "static/media/Concept Design 2.png": "/ZED-Portfolio-Website/static/media/Concept Design 2.40dff97d01a623033f01.png",
+    "static/media/Concept Design 3.png": "/ZED-Portfolio-Website/static/media/Concept Design 3.e910582e710a5714e19d.png",
     "static/media/ProjectImage.jpg": "/ZED-Portfolio-Website/static/media/ProjectImage.4b52546028cb6eea6915.jpg",
+    "static/media/Mechanism Design.png": "/ZED-Portfolio-Website/static/media/Mechanism Design.ec36b153abd1d6248c2f.png",
+    "static/media/Airplane Layout Concept.png": "/ZED-Portfolio-Website/static/media/Airplane Layout Concept.52dfb776ba7034b7dddf.png",
     "static/media/Heat3.jpg": "/ZED-Portfolio-Website/static/media/Heat3.3d6f4f30d69b8bd78122.jpg",
     "static/media/Heat2.jpg": "/ZED-Portfolio-Website/static/media/Heat2.4cbff3d303c3765edecc.jpg",
     "static/media/Heat1.jpg": "/ZED-Portfolio-Website/static/media/Heat1.cd275a7f40eed3b96557.jpg",
+    "static/media/Key.jpg": "/ZED-Portfolio-Website/static/media/Key.8e2561a86c3a5d078389.jpg",
     "static/media/DropdownArrowSVG.svg": "/ZED-Portfolio-Website/static/media/DropdownArrowSVG.95b3214870eee923803c.svg",
     "static/media/Picture3.jpg": "/ZED-Portfolio-Website/static/media/Picture3.89ddd626935f80f7670b.jpg",
     "static/media/Picture2.jpg": "/ZED-Portfolio-Website/static/media/Picture2.e405c50b661cc20e97c1.jpg",
     "index.html": "/ZED-Portfolio-Website/index.html",
     "static/media/HomeSVG.svg": "/ZED-Portfolio-Website/static/media/HomeSVG.9d2cf0db1e05d14948ef3b5e22b13b34.svg",
-    "main.0ceddaec.css.map": "/ZED-Portfolio-Website/static/css/main.0ceddaec.css.map",
-    "main.1f8ff54a.js.map": "/ZED-Portfolio-Website/static/js/main.1f8ff54a.js.map",
+    "main.254d8165.css.map": "/ZED-Portfolio-Website/static/css/main.254d8165.css.map",
+    "main.9eff9f53.js.map": "/ZED-Portfolio-Website/static/js/main.9eff9f53.js.map",
     "453.f5f8e440.chunk.js.map": "/ZED-Portfolio-Website/static/js/453.f5f8e440.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0ceddaec.css",
-    "static/js/main.1f8ff54a.js"
+    "static/css/main.254d8165.css",
+    "static/js/main.9eff9f53.js"
   ]
 }
