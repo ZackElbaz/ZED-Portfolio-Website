@@ -13,270 +13,175 @@
     --tag-padding: 1px 5px; /* Padding inside the tag */
     --date-background-color: #696969; /* Background color for the date pill */
     --date-text-color: #ffffff; /* Text color for the date pill */
+    --height: 90px
 }
 
 /* General styles */
-.project-header .project-name-container .project-name {
-    color: #ff7b00 !important;
-    font-size: clamp(var(--min-title-font-size), var(--project-title-font-size), var(--max-title-font-size)) !important;
-    line-height: var(--line-height); /* Default line height */
-    margin: 0;
-    z-index: 12;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0);
-    text-align: center;
-}
-
 .project-header {
+    height: 6px !important; /* Force height to see if it applies */
     margin: 0;
     padding: 0;
-    position: absolute;
+    position: relative;
+    width: 100%;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: var(--height) !important; /* Force height to see if it applies */
+}
+
+.left-quarter,
+.right-quarter {
+    flex: 0 0 auto; /* Prevent stretching */
+    height: 100%;
+}
+
+/* Set width and positioning for left-quarter */
+.left-quarter {
+    height: 100%;
+    width: 20%; /* Adjust as needed */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: flex-end; /* Align items to the end of the container */
     top: 0;
     left: 0;
-    width: 100%;
-    z-index: 10;
-    min-height: var(--min-container-height); /* Minimum height for the header */
+    padding-right: 1rem; /* Add padding if needed for spacing */
+    background-color: rgba(255, 0, 0, 0); /* Optional: visual aid for debugging */
 }
 
-.project-header .top {
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center; /* Center the content horizontally */
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 50px; /* Minimum height for the top section */
-}
-
-.project-header .left-quarter, 
-.project-header .middle-half, 
-.project-header .right-quarter {
+/* Set width and positioning for right-quarter */
+.right-quarter {
+    width: 15%; /* Adjust as needed */
     height: 100%;
-}
-
-.project-header .logo {
-    height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-}
-
-.project-header .dropdown-widget-container {
-    width: 100%;
+    top: 0;
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 255, 0, 0); /* Optional: visual aid for debugging */
 }
 
-.project-header .right-quarter {
+.middle-half {
+    flex: 1; /* Take up remaining space */
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 255, 0); /* For debugging */
+    height: var(--height) !important; /* Force height to see if it applies */
+}
+
+.project-date {
+    margin-left: 0rem; /* Space between tags and date */
+}
+
+.tag-list {
+    display: flex;
+    flex-direction: column; /* Stack tags vertically */
+    align-items: flex-end; /* Align tags to the right */
+    margin-right: -1rem; /* Adjust this value as needed */
+}
+
+.project-name {
+    flex: 1; /* Take up the remaining space */
+    text-align: center; /* Center text */
+    margin: 0; /* Remove default margins */
+    color: #ff7b00;
+    font-size: clamp(var(--min-title-font-size), var(--project-title-font-size), var(--max-title-font-size));
+    line-height: var(--line-height);
+    background-color: transparent;
+}
+
+.tag-list {
+    display: flex;
+    gap: 0px;
+}
+
+.project-date {
+    margin-right: auto;
+    color: var(--date-text-color);
+    background-color: var(--date-background-color);
+    padding: 0.2rem;
+    border-radius: 50px;
+    white-space: nowrap;
+    font-size: calc(((var(--project-title-font-size) - (1 * var(--tag-margin))) / 3) * 0.75);
+    transform: translateX(1em) rotate(-90deg);
+    font-weight: bold;
 }
 
 .project-info-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* Center horizontally within the container */
-    position: absolute; /* Absolute positioning for centering in viewport */
-    top: calc(50% + var(--title-below-dropdown)); /* Center vertically plus offset */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for exact horizontal center alignment */
-    z-index: 11;
-    min-width: var(--min-container-width); /* Minimum width for the info container */
-    min-height: var(--min-container-height); /* Minimum height for the info container */
-}
-
-.project-info-container .tag-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center tags vertically within the container */
-    align-items: flex-start; /* Align tags to the right of the title */
-    margin-right: var(--tag-margin); /* Space between tag list and title */
-}
-
-.project-info-container .project-name-container {
-    display: flex;
-    flex-direction: row; /* Align title and tags horizontally */
-    align-items: center; /* Center vertically within the container */
-    justify-content: center; /* Center horizontally within the container */
-}
-
-.tag-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center tags vertically within the container */
-    align-items: flex-start; /* Align tags to the right */
-    min-height: 50px; /* Minimum height for tag list */
+    justify-content: center;
+    position: absolute;
+    top: calc(50% + var(--title-below-dropdown));
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: var(--min-container-width);
+    min-height: var(--min-container-height);
 }
 
 .tag {
     color: var(--tag-text-color);
     font-size: calc(((var(--project-title-font-size) - (1 * var(--tag-margin))) / 3));
-    text-align: left;
-    margin-bottom: 0.3rem; /* Adjust spacing between tags */
+    background-color: var(--tag-background-color);
+    padding: var(--tag-padding);
+    border-radius: 50px;
     white-space: nowrap;
-    background-color: var(--tag-background-color); /* Background color for tags */
-    padding: var(--tag-padding); /* Padding inside the tag */
-    border-radius: 50px; /* Pill-shaped box */
-    transform: translate(2em);
+    margin-bottom: 0.3rem;
 }
 
-.left-quarter {
-    position: relative;
-    z-index: 99999999;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end !important; /* Align content to the right */
-    align-items: center;
-    padding-right: 0px; /* Optional: Add some padding to the right for spacing */
-    box-sizing: border-box; /* Include padding in the element's total width and height */
-}
-  
+/* Icon Styles */
 .home-icon {
-    fill: white; /* Make the SVG icon white */
-    width: 50px; /* Increase the width */
-    height: 50px; /* Increase the height */
-    cursor: pointer; /* Change the cursor to pointer to indicate it's clickable */
-    transition: transform 0.2s; /* Add a slight animation on hover */
+    fill: white;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
-  
+
 .home-icon:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon when hovered */
-    fill: #ff7b00; /* Make the SVG icon white */
+    transform: scale(1.1);
+    fill: #ff7b00;
 }
-  
-  
-.project-date {
-    color: var(--date-text-color); /* Text color for the date pill */
-    background-color: var(--date-background-color); /* Background color for the date pill */
-    font-size: calc((((var(--project-title-font-size) - (1 * var(--tag-margin))) / 3))* 0.75);
-    padding: 0em 0.2em;
-    border-radius: 50px; /* Pill-shaped box */
-    margin-left: 0em; /* Space between project name and date */
-    white-space: nowrap;
-    transform: translateX(1em) rotate(-90deg) ; /* Rotate the date 90 degrees counterclockwise */
-    transform-origin: middle; /* Adjust the origin of the transformation */
-    font-weight: bold;
-}
-  
 
-/* Landscape Orientation */
-@media (orientation: landscape) {
+/* Responsive Design */
+@media (max-width: 768px) {
     :root {
-        --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
-        --tag-margin: 1vw; /* Margin between tag list and title */
-        --min-title-font-size: 2rem; /* Minimum font size */
-        --max-title-font-size: 4rem; /* Maximum font size for large screens */
-        --min-container-height: 100px; /* Minimum height for containers */
-        --min-container-width: 200px; /* Minimum width for containers */
-        --line-height: 0.8; /* Default line height */
-        --title-below-dropdown: 40px; /* Distance below the dropdown widget */
+        --project-title-font-size: calc(1.5rem + 1vw);
+        --line-height: 1.1;
     }
 
-    .project-header .project-name-container .project-name {
-        font-size: clamp(var(--min-title-font-size), var(--project-title-font-size), var(--max-title-font-size)) !important;
-    }
-    
-    @media (max-width: 768px) {
-        :root {
-            --project-title-font-size: calc(1.5rem + 1vw); /* Adjust for smaller screens */
-            --line-height: 1.1; /* Tighter line height for smaller screens */
-        }
-
-        .project-header {
-            min-height: 80px; /* Adjust for smaller screens */
-        }
-
-        .project-header .top {
-            min-height: 40px; /* Adjust for smaller screens */
-        }
-
-        .project-info-container {
-            padding: 0 1rem; /* Adjust padding for smaller screens */
-        }
-
-        .project-name {
-            font-size: 1.5rem; /* Ensure font size is readable on smaller screens */
-        }
-
-        .tag {
-            font-size: 0.8rem; /* Adjust tag font size for smaller screens */
-        }
+    .project-header {
+        min-height: 80px;
     }
 
-    @media (max-width: 480px) {
-        :root {
-            --project-title-font-size: 3rem; /* Further adjustment for very small screens */
-            --line-height: 1.05; /* Even tighter line height for very small screens */
-        }
+    .project-header .top {
+        min-height: 40px;
+    }
 
-        .project-header {
-            min-height: 60px; /* Further adjust for very small screens */
-        }
+    .project-name {
+        font-size: 1.5rem;
+    }
 
-        .project-info-container {
-            padding: 0 0.5rem; /* Further adjust padding for very small screens */
-        }
+    .tag {
+        font-size: 0.8rem;
     }
 }
 
-/* Portrait Orientation */
-@media (orientation: portrait) {
+@media (max-width: 480px) {
     :root {
-        --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
-        --tag-margin: 1vw; /* Margin between tag list and title */
-        --min-title-font-size: 1.75rem; /* Minimum font size */
-        --min-container-height: 100px; /* Minimum height for containers */
-        --min-container-width: 200px; /* Minimum width for containers */
-        --line-height: 0.8; /* Default line height */
-        --title-below-dropdown: 25px; /* Distance below the dropdown widget */
+        --project-title-font-size: 3rem;
+        --line-height: 1.05;
     }
 
-    .project-header .project-name-container .project-name {
-        font-size: min(var(--project-title-font-size), var(--min-title-font-size)) !important;
+    .project-header {
+        min-height: 60px;
     }
 
-    @media (max-width: 768px) {
-        :root {
-            --project-title-font-size: calc(1.5rem + 1vw); /* Adjust for smaller screens */
-            --line-height: 1.1; /* Tighter line height for smaller screens */
-        }
-
-        .project-header {
-            min-height: 80px; /* Adjust for smaller screens */
-        }
-
-        .project-header .top {
-            min-height: 40px; /* Adjust for smaller screens */
-        }
-
-        .project-info-container {
-            padding: 0 1rem; /* Adjust padding for smaller screens */
-        }
-
-        .project-name {
-            font-size: 1.5rem; /* Ensure font size is readable on smaller screens */
-        }
-
-        .tag {
-            font-size: 0.8rem; /* Adjust tag font size for smaller screens */
-        }
-    }
-
-    @media (max-width: 480px) {
-        :root {
-            --project-title-font-size: 3rem; /* Further adjustment for very small screens */
-            --line-height: 1.05; /* Even tighter line height for very small screens */
-        }
-
-        .project-header {
-            min-height: 60px; /* Further adjust for very small screens */
-        }
-
-        .project-info-container {
-            padding: 0 0.5rem; /* Further adjust padding for very small screens */
-        }
+    .project-info-container {
+        padding: 0 0.5rem;
     }
 }

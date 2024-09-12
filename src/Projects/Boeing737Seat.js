@@ -221,7 +221,7 @@ function Boeing737Seat() {
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
       <div className="image-wrapper">
           <img src={ExplodedView} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '50%', height: 'auto' }} />
-          <p>This was my first design project at university, and involved redesigning a long-haul economy seat for a Boeing 777-300. I was encouraged to redesign the cabin layout to maximise profits whilst considering passenger comfort.</p>
+          This was my first design project at university, and involved redesigning a long-haul economy seat for a Boeing 777-300. I was encouraged to redesign the cabin layout to maximise profits whilst considering passenger comfort.
           <p>The aim of creating this seat was to reduce manufacture, assembly, and material costs as well as reduce the plane fuel costs by reducing the seat weight where possible. The seat did still fulfil all standard safety requirements.</p>
         </div>
         <p>This was my first time designing a new product. I started designing iteratively, documenting all my progress in a project notebook. You can see some of the initial sketches designing the Headrest, Armrest, and Under-seat Barrier:</p>
@@ -233,8 +233,8 @@ function Boeing737Seat() {
         <p>The seat also needed a compact and adjustable reclining mechanism. I designed a few such mechanisms which can be seen below. Using a Pugh selection Matrix, I converged on a final seat concept.</p>
         <img src={MechanismDesign} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
         <div className="image-wrapper">
-          <img src={FinalDesignSketch} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '30%', height: 'auto' }} />
-          The final design concept can be seen here to the left/right. It adheres to the brief while maximising passenger comfort.
+          <img src={FinalDesignSketch} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '25%', height: 'auto' }} />
+          The final design concept can be seen here to the left. It not only adheres to the brief, but also maximises passenger comfort.
         </div>
         <p>After making some preliminary CAD parts, I hand calculated the forces through the chair legs during a crash. Considering a 99th%-ile human weight, I redesigned the legs to survive a crash with minimal deflection, and improved them further using generative design techniques.</p>
         <img src={BaseDevelopment} alt="Base Development" style={{ width: '90%', height: 'auto' }} />

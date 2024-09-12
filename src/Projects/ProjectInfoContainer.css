@@ -2,31 +2,33 @@
 
 /* Ensure the ProjectHeader is fixed at the top */
 .project-header {
-    position: fixed; /* Fix the header to the top */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1000; /* Ensure it's above other content */
-    background-color: #000000; /* Background color to ensure visibility */
+    z-index: 1000;
+    background-color: #000000; /* Ensure visibility */
+    height: 30px; /* Example height; adjust as needed */
 }
+
 
 /* Add padding to the container to account for the fixed header */
 .page-container {
-    padding-top: 80px; /* Adjust this value according to the height of your ProjectHeader */
+    margin-top: -19px; /* Adjust this value according to the height of your ProjectHeader */
     position: relative;
 }
 
 /* Fixed content box with borders and customized scrollbar */
 .project-info-box {
     position: fixed; /* Fix the position relative to the viewport */
-    top: 200px; /* Distance from the top of the viewport */
+    top: 100px; /* Distance from the top of the viewport */
     bottom: 10vw; /* Distance from the bottom of the viewport */
     left: 0;
     right: 0;
     background-color: #ffffff; /* Background color for visibility */
     border: 3px solid #000000; /* Border for better visual separation */
-    border-left: 16px solid #000000; /* Left border */
-    border-right: 16px solid #000000; /* Right border */
+    border-left: 20px solid #000000; /* Left border */
+    border-right: 20px solid #000000; /* Right border */
     padding: 20px; /* Padding inside the content box */
     box-sizing: border-box; /* Ensure padding is included in total width/height */
     overflow-y: auto; /* Add scrollbar if content overflows */
