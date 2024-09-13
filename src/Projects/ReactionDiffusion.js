@@ -1,3 +1,5 @@
+import Placeholder from './ReactionDiffusionImages/Placeholder.jpg';
+
 // ReactionDiffusion.js
 import React, { useEffect, useRef, useState } from 'react';
 import './ProjectInfoContainer.css'; // Import the shared CSS file
@@ -112,7 +114,12 @@ function ReactionDiffusion() {
       
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
-        hi this is my  content
+        CONTENT COMING SOON!
+        <p>Take a look at this informative Youtube video made by Diego Pinochet MIT about Reaction Diffusion and the Gray-Scott model:</p>
+        <p><a href="https://www.youtube.com/watch?v=Iigfe7ZQfyY" target="_blank" rel="noopener noreferrer">
+          Watch Video
+        </a></p>
+        <img src={Placeholder} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

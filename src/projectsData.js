@@ -18,7 +18,7 @@ export const projects = [
     name: 'ColouredHalftone', 
     displayName: 'Coloured Halftone', 
     tags: ['Art'], 
-    date: new Date('April 2022'),
+    date: new Date('March 2022'),
     imagePath: require('./Projects/ColouredHalftoneImages/halftoneTemp.jpg') 
     },
     { 
@@ -29,11 +29,11 @@ export const projects = [
     imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg')
     },
     { 
-    name: 'GausticLensGenerator', 
-    displayName: 'Gaustic Lens Generator', 
+    name: 'CausticLensGenerator', 
+    displayName: 'Caustic Lens Generator', 
     tags: ['Art'], 
-    date: new Date('April 2020'),
-    imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg')
+    date: new Date('April 2022'),
+    imagePath: require('./Projects/CausticLensGeneratorImages/SteveMould.jpg')
     },
     { 
     name: 'LightbugRTK', 
@@ -47,14 +47,14 @@ export const projects = [
     displayName: 'Mechanical Mirror', 
     tags: ['Art', 'Robotics'], 
     date: new Date('April 2020'),
-    imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg') 
+    imagePath: require('./Projects/MechanicalMirrorImages/WIRED.jpg') 
     },
     { 
     name: 'PhysicalGIF', 
     displayName: 'Physical GIF', 
     tags: ['Art'], 
     date: new Date('April 2020'),
-    imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg')
+    imagePath: require('./Projects/PhysicalGIFImages/Carnovsky.jpg')
     },
     { 
     name: 'RaceTrackerGPS', 
@@ -67,8 +67,8 @@ export const projects = [
     name: 'ReactionDiffusion', 
     displayName: 'Reaction Diffusion', 
     tags: ['Art'], 
-    date: new Date('April 2020'),
-    imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg')
+    date: new Date('April 2025'),
+    imagePath: require('./Projects//ReactionDiffusionImages/Placeholder.jpg')
     },
     { 
     name: 'ThreeDGPS', 

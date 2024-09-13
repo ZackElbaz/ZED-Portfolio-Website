@@ -13,7 +13,7 @@ import PhysicalGIF from './Projects/PhysicalGIF';
 import ReactionDiffusion from './Projects/ReactionDiffusion';
 import MechanicalMirror from './Projects/MechanicalMirror';
 import ColouredHalftone from './Projects/ColouredHalftone';
-import GausticLensGenerator from './Projects/GausticLensGenerator';
+import CausticLensGenerator from './Projects/CausticLensGenerator';
 
 function App() {
   return (
@@ -32,7 +32,7 @@ function App() {
         <Route path="/Projects/ReactionDiffusion" element={<ReactionDiffusion />} />
         <Route path="/Projects/MechanicalMirror" element={<MechanicalMirror />} />
         <Route path="/Projects/ColouredHalftone" element={<ColouredHalftone />} />
-        <Route path="/Projects/GausticLensGenerator" element={<GausticLensGenerator />} />
+        <Route path="/Projects/CausticLensGenerator" element={<CausticLensGenerator />} />
       </Routes>
     </Router>
   );

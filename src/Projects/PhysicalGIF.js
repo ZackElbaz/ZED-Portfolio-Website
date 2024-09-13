@@ -1,3 +1,5 @@
+import Carnovsky from './PhysicalGIFImages/Carnovsky.jpg';
+
 // PhysicalGIF.js
 import React, { useEffect, useRef, useState } from 'react';
 import './ProjectInfoContainer.css'; // Import the shared CSS file
@@ -112,9 +114,13 @@ function PhysicalGIF() {
       
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
-        hi this is my  content
+        CONTENT COMING SOON!
+        <p>Take a look at Carnovskys website for a sneak peek on some similar artowrk:</p>
+        <p><a href="https://www.carnovsky.com/RGB.htm" target="_blank" rel="noopener noreferrer">
+          Go to Website
+        </a></p>
+        <img src={Carnovsky} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
       </div>
-
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />
     </div>
   );

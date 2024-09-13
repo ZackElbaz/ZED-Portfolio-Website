@@ -1,4 +1,6 @@
-// GausticLensGenerator.js
+import SteveMould from './CausticLensGeneratorImages/SteveMould.jpg';
+
+// CausticLensGenerator.js
 import React, { useEffect, useRef, useState } from 'react';
 import './ProjectInfoContainer.css'; // Import the shared CSS file
 import BlackBackground from '../BlackBackground'; // Import the new BlackBackground component
@@ -55,7 +57,7 @@ const resizeImagesInLandscapeMode = () => {
   });
 };
 
-function GausticLensGenerator() {
+function CausticLensGenerator() {
   const projectBarRef = useRef(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
@@ -103,7 +105,7 @@ function GausticLensGenerator() {
     resizeImagesInLandscapeMode();
   }, []);
 
-  const currentProject = "GausticLensGenerator"; // Or dynamically set this
+  const currentProject = "CausticLensGenerator"; // Or dynamically set this
 
   return (
     <div className="page-container">
@@ -112,7 +114,12 @@ function GausticLensGenerator() {
       
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
-        hi this is my  content
+        CONTENT COMING SOON!
+        <p>Take a look at this informative Youtube video made by Steve Mould for an explanation on how caustic lenses work:</p>
+        <p><a href="https://www.youtube.com/watch?v=wk67eGXtbIw" target="_blank" rel="noopener noreferrer">
+          Watch Video
+        </a></p>
+        <img src={SteveMould} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />
@@ -120,4 +127,4 @@ function GausticLensGenerator() {
   );
 }
 
-export default GausticLensGenerator;
+export default CausticLensGenerator;

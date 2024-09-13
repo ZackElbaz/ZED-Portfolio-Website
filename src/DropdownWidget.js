@@ -6,7 +6,7 @@ const ProjectList = [
     { id: 0, name: 'Real Time Kinematic GPS Device', url: '/Projects/LightbugRTK' },
     { id: 1, name: 'Knee Implant Test Rig', url: '/Projects/TKRTestDevice' },
     { id: 2, name: 'Bicycle Ambulance', url: '/Projects/BicycleAmbulance' },
-    { id: 3, name: 'Boeing 737 Seat', url: '/Projects/Boeing737Seat' },
+    { id: 3, name: 'Boeing 777-300 Seat', url: '/Projects/Boeing737Seat' },
     { id: 4, name: '3D GPS Tracker', url: '/Projects/ThreeDGPS' },
     { id: 5, name: 'RaceTracker GPS', url: '/Projects/RaceTrackerGPS' },
     { id: 6, name: 'Domestic Fire Risk Assessment Robot', url: '/Projects/FireRiskAssessment' },
@@ -14,7 +14,7 @@ const ProjectList = [
     { id: 8, name: 'Reaction-Diffusion Art', url: '/Projects/ReactionDiffusion' },
     { id: 9, name: 'Mechanical Mirror', url: '/Projects/MechanicalMirror' },
     { id: 10, name: 'Coloured Halftones', url: '/Projects/ColouredHalftone' },
-    { id: 11, name: 'Gaustic Lens Generator', url: '/Projects/GausticLensGenerator' },
+    { id: 11, name: 'Caustic Lens Generator', url: '/Projects/CausticLensGenerator' },
 ];
 
 const DropdownWidget = () => {
@@ -22,6 +22,7 @@ const DropdownWidget = () => {
     const [searchInput, setSearchInput] = useState('');
     const [filteredProjectList, setFilteredProjectList] = useState(ProjectList);
     const [selectedIdx, setSelectedIdx] = useState(-1); // Index of the currently selected Project
+    const [placeholder, setPlaceholder] = useState('Search for projects...'); // Placeholder state
     const dropdownRef = useRef(null);
     const searchInputRef = useRef(null); // Ref for the search input
     const arrowRef = useRef(null); // Ref for the dropdown arrow
@@ -50,6 +51,28 @@ const DropdownWidget = () => {
             }
         }
     }, [selectedIdx, isOpen]);
+
+    useEffect(() => {
+        // Function to update placeholder text based on orientation
+        const updatePlaceholder = () => {
+            if (window.matchMedia('(orientation: landscape)').matches) {
+                setPlaceholder('Search for projects...');
+            } else {
+                setPlaceholder('Search...');
+            }
+        };
+
+        // Add event listener for orientation change
+        window.addEventListener('resize', updatePlaceholder);
+
+        // Initial check
+        updatePlaceholder();
+
+        // Clean up event listener on component unmount
+        return () => {
+            window.removeEventListener('resize', updatePlaceholder);
+        };
+    }, []);
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
@@ -122,7 +145,7 @@ const DropdownWidget = () => {
                     onChange={handleInputChange}
                     onKeyDown={handleKeyPress}
                     onClick={toggleDropdown}
-                    placeholder="Search..."
+                    placeholder={placeholder} // Use dynamic placeholder
                     className="dropdown-input"
                     value={searchInput}
                     ref={searchInputRef} // Assign ref to the search input

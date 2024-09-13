@@ -1,3 +1,5 @@
+import WIRED from './MechanicalMirrorImages/WIRED.jpg';
+
 // MechanicalMirror.js
 import React, { useEffect, useRef, useState } from 'react';
 import './ProjectInfoContainer.css'; // Import the shared CSS file
@@ -112,7 +114,12 @@ function MechanicalMirror() {
       
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
-        hi this is my  content
+      CONTENT COMING SOON!
+        <p>Take a look at this Youtube video made by WIRED which elaborates on similar projects made by Professor Daniel Rozin:</p>
+        <p><a href="https://www.youtube.com/watch?v=kV8v2GKC8WA&t=49s" target="_blank" rel="noopener noreferrer">
+          Watch Video
+        </a></p>
+        <img src={WIRED} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

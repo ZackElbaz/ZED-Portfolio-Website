@@ -115,6 +115,10 @@ function ColouredHalftone() {
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
         CONTENT COMING SOON!
+        <p>Take a look at this Youtube video made by Posy for an insight on how coloured halftoning works:</p>
+        <p><a href="https://www.youtube.com/watch?v=VckU9UXI_XE" target="_blank" rel="noopener noreferrer">
+          Watch Video
+        </a></p>
         <img src={Temporary} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
       </div>
 

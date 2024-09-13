@@ -11,7 +11,7 @@
     bottom: 0;
     width: 100%;
     background-color: #000000;
-    padding: 2vw;
+    padding: 0.2vw;
     color: rgb(255, 255, 255);
     box-sizing: border-box;
     display: flex;
@@ -31,11 +31,12 @@
 }
 
 .similar-projects-title {
-    font-size: 2vw;
+    font-size: 1.2vw;
     margin: 0;
     line-height: 1;
     display: flex;
     align-items: center;
+    color: #ff7300;
 }
 
 .project-buttons-container {
@@ -46,13 +47,13 @@
 }
 
 .project-button {
-    padding: 0.8vw 1.2vw;
+    padding: 0.4vw 0.6vw;
     background-color: #f4f4f4;
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
     flex-shrink: 0;
-    font-size: 1.8vw;
+    font-size: 1vw;
     font-weight: bold;
     white-space: nowrap;
     display: flex;
@@ -78,4 +79,20 @@
 .project-button:hover,
 .project-button:active {
     color: #ffffff;
+}
+
+
+/* Media Query for Portrait Mode */
+@media only screen and (orientation: portrait) {
+    .project-bar {
+        padding: 4vw;
+    }
+    .similar-projects-title {
+        font-size: 3vw; /* Make font size significantly larger */
+    }
+    
+    .project-button {
+        font-size: 2.5vw; /* Make font size larger */
+        padding: 0.8vw 1.2vw; /* Adjust padding for larger button size */
+    }
 }

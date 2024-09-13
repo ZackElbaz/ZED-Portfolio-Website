@@ -14,7 +14,7 @@
 
 /* Add padding to the container to account for the fixed header */
 .page-container {
-    margin-top: -19px; /* Adjust this value according to the height of your ProjectHeader */
+    margin-top: -15px; /* Adjust this value according to the height of your ProjectHeader */
     position: relative;
 }
 
@@ -22,7 +22,7 @@
 .project-info-box {
     position: fixed; /* Fix the position relative to the viewport */
     top: 100px; /* Distance from the top of the viewport */
-    bottom: 10vw; /* Distance from the bottom of the viewport */
+    bottom: 30vw; /* Distance from the bottom of the viewport */
     left: 0;
     right: 0;
     background-color: #ffffff; /* Background color for visibility */
@@ -45,7 +45,7 @@
 }
 
 .project-info-box::-webkit-scrollbar-thumb:hover {
-    background-color: #ff7b00; /* Darker color when hovering over the scrollbar handle */
+    background-color: #ff7300; /* Darker color when hovering over the scrollbar handle */
 }
 
 .project-info-box::-webkit-scrollbar-track {
