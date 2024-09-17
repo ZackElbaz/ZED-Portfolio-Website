@@ -1,3 +1,12 @@
+import CAD from './RaceTrackerGPSImages/CAD.png';
+import Case from './RaceTrackerGPSImages/Case.png';
+import emptytrays from './RaceTrackerGPSImages/emptytrays.png';
+import filledtrays from './RaceTrackerGPSImages/filledtrays.png';
+import RaceTrackerLogo from './RaceTrackerGPSImages/RaceTrackerLogo.png';
+import ThreeDPrint1 from './RaceTrackerGPSImages/ThreeDPrint1.png';
+import ThreeDPrint2 from './RaceTrackerGPSImages/ThreeDPrint2.png';
+import ThreeDPrint3 from './RaceTrackerGPSImages/ThreeDPrint3.png';
+
 // RaceTrackerGPS.js
 import React, { useEffect, useRef, useState } from 'react';
 import './ProjectInfoContainer.css'; // Import the shared CSS file
@@ -112,7 +121,26 @@ function RaceTrackerGPS() {
       
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
-        hi this is my  content
+        <div className="image-wrapper">
+          <img src={RaceTrackerLogo} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '25%', height: 'auto' }} />
+          During my year in industry, working at Lightbug, I was placed on a project to redesign the charging stations used by RaceTracker. I designed injection moulded modular charging docks and respective injection moulded components to cater for large fleets of trackers. These form removeable portable charging trays that fit inside standardised waterproof Nanuk 918 and 950 cases.
+        </div>
+        <p>The aim of this project was to reduce manufacturing costs and assembly time. Following regular communications with Shenzhen Kaierwo Plastics, I now have a firm grasp of the more nuanced aspects of designing for injection moulding, and understand the limitations imposed by this manufacturing process, and have now designed mass manufacturable compliant plastic components. My designs ensured all the components in these assemblies require no sliders during the injection moulding process, and the assembly for both docks require no external components such as glue.</p>
+        <div className="image-container">
+          <img src={ThreeDPrint1} alt="Concept Design 3" />
+          <img src={ThreeDPrint2} alt="Concept Design 1" />
+          <img src={ThreeDPrint3} alt="Concept Design 2" />
+        </div>
+        <div className="image-wrapper">
+          <img src={emptytrays} alt="Final Design Sketch" style={{ float: 'right', marginLeft: '15px', maxWidth: '50%', height: 'auto' }} />
+          <img src={CAD} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '35%', height: 'auto' }} />
+          With my design, I managed to reduce assembly time of the Racetracker trays by a factor of 3 as well as reduce the material cost by a factor of 2. There have been no faulty injection moulded parts, all the components fit correctly, no issues during assembly and none of the charging pins failed to contact either the board or the Racetracker AS devices.
+        </div>
+        <p><img src={filledtrays} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} /></p>
+        <div className="image-wrapper">
+          <img src={Case} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '35%', height: 'auto' }} />
+          Racetracker AS were provided with an early prototype to use for a few months, their satisfaction with the Racetracker design and tray improvements resulted in an additional 500 tracker orders, a 75% increase to their original order.
+        </div>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

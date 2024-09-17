@@ -1,3 +1,11 @@
+import DataTester from './ThreeDGPSImages/DataTester.png';
+import Equation from './ThreeDGPSImages/Equation.png';
+import LightbugLogo from './ThreeDGPSImages/LightbugLogo.png';
+import Terrain from './ThreeDGPSImages/Terrain.png';
+import Triangulation from './ThreeDGPSImages/Triangulation.png';
+import Whiteboard1 from './ThreeDGPSImages/Whiteboard1.png';
+import Whiteboard2 from './ThreeDGPSImages/Whiteboard2.png';
+
 // ThreeDGPS.js
 import React, { useEffect, useRef, useState } from 'react';
 import './ProjectInfoContainer.css'; // Import the shared CSS file
@@ -112,7 +120,22 @@ function ThreeDGPS() {
       
       {/* Project Content */}
       <div className="project-info-box" style={{ bottom: `${projectBarRef.current?.offsetHeight}px` }}>
-        hi this is my  content
+        <div className="image-wrapper">
+          <img src={LightbugLogo} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '25%', height: 'auto' }} />
+          This was a research and development project that I carried out in the second half of my year in industry. It involved research for gathering altitude variance data using live pressure and humidity readings, leading to the development of prototypes for the first commercially viable GPS tracker that accurately identifies location in all three dimensions.
+        </div>
+        <div className="image-container">
+          <img src={Triangulation} alt="Concept Design 3" />
+          <img src={Terrain} alt="Concept Design 1" />
+        </div>
+        <p>This project taught me how to read data sheets and theoretical knowledge on how sensors measure environmental elements, as well as giving me the opportunity to manage a long-standing project, document progress in a coherent manner, and carry out efficient and comprehensive research.</p>
+        <div className="image-container">
+          <img src={Whiteboard2} alt="Concept Design 1" />
+          <img src={Whiteboard1} alt="Concept Design 1" />
+          <img src={DataTester} alt="Concept Design 3" />
+        </div>
+        <p>By the end of my placement I had created an equation that, using live barometric data from sensors, accurately located the device within 1m of accuracy. This feature can be used in the infrastructure industry to detect building site levels, the depth of holes that need to be dug and the proximity of tools to subterranean pipes. It could also be used underground, outside and in tall buildings such as hospitals to identify what floor a piece of equipment is located, or to create vertical tracking maps for climbing routes, hikes and runs.</p>
+        <img src={Equation} alt="Mechanism Design" class="centered-image" style={{ width: '50%', height: 'auto' }} />
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

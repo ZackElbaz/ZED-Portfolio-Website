@@ -116,6 +116,10 @@ function HomePage() {
               <div className="buffer"></div>
               <div className="rectangle-buffer">
                 <div className="rectangle">
+                  {/* New "Recent Projects" label */}
+                  <div className="recent-projects-label">
+                    Recent Projects:
+                  </div>
                   {/* Three sections inside the rectangle */}
                   <div 
                     className="section section-1" 

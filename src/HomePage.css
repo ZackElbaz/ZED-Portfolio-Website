@@ -56,6 +56,20 @@
   background-color: var(--rectangle-color, rgba(0, 0, 0, 0.384));
   border: 0px solid var(--border-color, #ffffff);
 }
+
+.recent-projects-label {
+  position: absolute;
+  top: 20px; /* Adjust distance from the top */
+  left: 20px; /* Adjust distance from the left */
+  font-size: 2vw; /* Responsive font size */
+  color: rgb(255, 122, 6); /* Text color */
+  background-color: rgb(255, 255, 255); /* Semi-transparent background */
+  padding: 10px 20px; /* Padding for the label */
+  border-radius: 10px; /* Rounded corners */
+  font-weight: bold; /* Make the text bold */
+  z-index: 10; /* Ensure it stays on top */
+}
+
 /* Overlay effect */
 .section::before {
 content: ""; /* Required for pseudo-element */
@@ -156,6 +170,12 @@ border-bottom-right-radius: 40px;
   /* Portrait: Display sections stacked vertically (default) */
   .rectangle {
     flex-direction: column;
+  }
+  .recent-projects-label {
+    font-size: 4vw; /* Increase font size for portrait mode */
+    top: 10px; /* Adjust distance from the top */
+    left: 50%; /* Move to the horizontal center */
+    transform: translateX(-50%); /* Center the element horizontally */
   }
 }
 

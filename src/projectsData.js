@@ -18,7 +18,7 @@ export const projects = [
     name: 'ColouredHalftone', 
     displayName: 'Coloured Halftone', 
     tags: ['Art'], 
-    date: new Date('March 2022'),
+    date: new Date('May 2020'),
     imagePath: require('./Projects/ColouredHalftoneImages/halftoneTemp.jpg') 
     },
     { 
@@ -32,7 +32,7 @@ export const projects = [
     name: 'CausticLensGenerator', 
     displayName: 'Caustic Lens Generator', 
     tags: ['Art'], 
-    date: new Date('April 2022'),
+    date: new Date('May 2020'),
     imagePath: require('./Projects/CausticLensGeneratorImages/SteveMould.jpg')
     },
     { 
@@ -46,36 +46,36 @@ export const projects = [
     name: 'MechanicalMirror', 
     displayName: 'Mechanical Mirror', 
     tags: ['Art', 'Robotics'], 
-    date: new Date('April 2020'),
+    date: new Date('May 2020'),
     imagePath: require('./Projects/MechanicalMirrorImages/WIRED.jpg') 
     },
     { 
     name: 'PhysicalGIF', 
     displayName: 'Physical GIF', 
     tags: ['Art'], 
-    date: new Date('April 2020'),
+    date: new Date('May 2020'),
     imagePath: require('./Projects/PhysicalGIFImages/Carnovsky.jpg')
     },
     { 
     name: 'RaceTrackerGPS', 
     displayName: 'Race Tracker GPS', 
     tags: ['Device', 'DFM'], 
-    date: new Date('February 2022'),
-    imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg')
+    date: new Date('March 2022'),
+    imagePath: require('./Projects/RaceTrackerGPSImages/emptytrays.png')
     },
     { 
     name: 'ReactionDiffusion', 
     displayName: 'Reaction Diffusion', 
     tags: ['Art'], 
-    date: new Date('April 2025'),
+    date: new Date('May 2020'),
     imagePath: require('./Projects//ReactionDiffusionImages/Placeholder.jpg')
     },
     { 
     name: 'ThreeDGPS', 
     displayName: '3D GPS', 
     tags: ['Device', 'Research'], 
-    date: new Date('March 2022'),
-    imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg')
+    date: new Date('February 2022'),
+    imagePath: require('./Projects/ThreeDGPSImages/Triangulation.png')
     },
     { 
     name: 'TKRTestDevice', 
