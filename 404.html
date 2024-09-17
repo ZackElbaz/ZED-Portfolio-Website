@@ -3,22 +3,27 @@
   <head>
     <meta charset="UTF-8">
     <script type="text/javascript">
-      // Get the current path
-      var currentPath = window.location.pathname;
+      window.onload = function() {
+        // Get the current path
+        var currentPath = window.location.pathname;
 
-      // Check if the current path already contains the base URL
-      if (!currentPath.startsWith("/ZED-Portfolio-Website")) {
-        // If not, prepend the base URL to the path
-        var redirectUrl = "/ZED-Portfolio-Website" + currentPath;
+        // Check if the current path already contains the base URL
+        if (!currentPath.startsWith("/ZED-Portfolio-Website")) {
+          // If not, prepend the base URL to the path
+          var redirectUrl = "/ZED-Portfolio-Website" + currentPath;
 
-        // Perform the redirect
-        window.location.href = redirectUrl;
-      }
+          // Perform the redirect after a small delay to allow users to read the message
+          setTimeout(function() {
+            window.location.href = redirectUrl;
+          }, 2000); // 2 seconds delay
+        }
+      };
     </script>
   </head>
   <body>
     <h1>Redirecting...</h1>
-    <p>If you are not redirected, <a href="/ZED-Portfolio-Website/">click here</a>.</p>
+    <p>If you are not redirected within a few seconds, <a href="/ZED-Portfolio-Website/">click here</a>.</p>
   </body>
 </html>
+
 
