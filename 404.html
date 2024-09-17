@@ -2,18 +2,23 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/ZED-Portfolio-Website/" />
     <script type="text/javascript">
-      // This script will handle the redirect to the correct React route.
-      var path = window.location.pathname;
-      var redirectUrl = "/ZED-Portfolio-Website" + path;
-      
-      // Perform the redirect
-      window.location.href = redirectUrl;
+      // Get the current path
+      var currentPath = window.location.pathname;
+
+      // Check if the current path already contains the base URL
+      if (!currentPath.startsWith("/ZED-Portfolio-Website")) {
+        // If not, prepend the base URL to the path
+        var redirectUrl = "/ZED-Portfolio-Website" + currentPath;
+
+        // Perform the redirect
+        window.location.href = redirectUrl;
+      }
     </script>
   </head>
   <body>
     <h1>Redirecting...</h1>
-    <p>If you are not redirected, <a id="redirect-link" href="/">click here</a>.</p>
+    <p>If you are not redirected, <a href="/ZED-Portfolio-Website/">click here</a>.</p>
   </body>
 </html>
+
