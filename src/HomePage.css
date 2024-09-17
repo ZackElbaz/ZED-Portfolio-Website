@@ -62,8 +62,8 @@
   top: 20px; /* Adjust distance from the top */
   left: 20px; /* Adjust distance from the left */
   font-size: 2vw; /* Responsive font size */
-  color: rgb(255, 122, 6); /* Text color */
-  background-color: rgb(255, 255, 255); /* Semi-transparent background */
+  color: #ff7300; /* Text color */
+  background-color: rgb(70, 70, 70); /* Semi-transparent background */
   padding: 10px 20px; /* Padding for the label */
   border-radius: 10px; /* Rounded corners */
   font-weight: bold; /* Make the text bold */
