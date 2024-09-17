@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <script type="text/javascript">
       window.onload = function() {
-        // Get the current path
-        var currentPath = window.location.pathname;
+        // Define the base URL for your GitHub Pages site
+        var baseUrl = "/ZED-Portfolio-Website";
 
-        // Check if the current path already contains the base URL
-        if (!currentPath.startsWith("/ZED-Portfolio-Website")) {
-          // If not, prepend the base URL to the path
-          var redirectUrl = "/ZED-Portfolio-Website" + currentPath;
+        // Get the current path (after the "/ZED-Portfolio-Website")
+        var currentPath = window.location.pathname.replace(baseUrl, "");
 
-          // Perform the redirect after a small delay to allow users to read the message
-          setTimeout(function() {
-            window.location.href = redirectUrl;
-          }, 2000); // 2 seconds delay
+        // Redirect if the current path isn't already inside the base URL
+        if (window.location.pathname.indexOf(baseUrl) === -1) {
+          // Use window.location.replace for immediate redirection without history
+          window.location.replace(baseUrl + currentPath);
         }
       };
     </script>
@@ -25,5 +23,6 @@
     <p>If you are not redirected within a few seconds, <a href="/ZED-Portfolio-Website/">click here</a>.</p>
   </body>
 </html>
+
 
 
