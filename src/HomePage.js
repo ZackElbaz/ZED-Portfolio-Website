@@ -195,7 +195,10 @@ function HomePage() {
                   </div>
                   <div className="icon-container">
                     <div>
-                      <a href={`${process.env.PUBLIC_URL}/Zack El-baz CV 2024.pdf`} download="Zack_El-baz_CV_2024.pdf">
+                    <a 
+                      href={`${process.env.PUBLIC_URL}/Zack El-baz CV 2024 V2.pdf`} 
+                      download="Zack_El-baz_CV_2024.pdf"
+                    >
                         <img src={`${process.env.PUBLIC_URL}/PDFSVG.svg`} alt="CV" className="icon" />
                       </a>
                     </div>
