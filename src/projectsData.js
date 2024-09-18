@@ -16,14 +16,14 @@ export const projects = [
     },
     { 
     name: 'ColouredHalftone', 
-    displayName: 'Coloured Halftone', 
+    displayName: 'Coloured Halftones', 
     tags: ['Art'], 
     date: new Date('May 2020'),
     imagePath: require('./Projects/ColouredHalftoneImages/halftoneTemp.jpg') 
     },
     { 
     name: 'FireRiskAssessment', 
-    displayName: 'Fire Risk Assessment', 
+    displayName: 'Domestic Fire Risk Assessment Robot', 
     tags: ['Medical', 'Safety', 'Robotics', 'University'], 
     date: new Date('May 2021'),
     imagePath: require('./Projects/BicycleAmbulanceImages/ProjectImage.jpg')
@@ -37,7 +37,7 @@ export const projects = [
     },
     { 
     name: 'LightbugRTK', 
-    displayName: 'Lightbug RTK', 
+    displayName: 'Real Time Kinematic GPS Device', 
     tags: ['Device', 'DFM'], 
     date: new Date('May 2022'),
     imagePath: require('./Projects/LightbugRTKImages/FinalProduct.png')
@@ -51,35 +51,35 @@ export const projects = [
     },
     { 
     name: 'PhysicalGIF', 
-    displayName: 'Physical GIF', 
+    displayName: 'Physical GIF Generator', 
     tags: ['Art'], 
     date: new Date('May 2020'),
     imagePath: require('./Projects/PhysicalGIFImages/Carnovsky.jpg')
     },
     { 
     name: 'RaceTrackerGPS', 
-    displayName: 'Race Tracker GPS', 
+    displayName: 'RaceTracker GPS', 
     tags: ['Device', 'DFM'], 
     date: new Date('March 2022'),
     imagePath: require('./Projects/RaceTrackerGPSImages/emptytrays.png')
     },
     { 
     name: 'ReactionDiffusion', 
-    displayName: 'Reaction Diffusion', 
+    displayName: 'Reaction-Diffusion Art', 
     tags: ['Art'], 
     date: new Date('May 2020'),
     imagePath: require('./Projects//ReactionDiffusionImages/Placeholder.jpg')
     },
     { 
     name: 'ThreeDGPS', 
-    displayName: '3D GPS', 
+    displayName: '3D GPS Tracker', 
     tags: ['Device', 'Research'], 
     date: new Date('February 2022'),
     imagePath: require('./Projects/ThreeDGPSImages/Triangulation.png')
     },
     { 
     name: 'TKRTestDevice', 
-    displayName: 'TKR Test Device', 
+    displayName: 'Knee Implant Test Rig', 
     tags: ['Robotics', 'Research', 'University'], 
     date: new Date('May 2024'),
     imagePath: require('./Projects/TKRTestDeviceImages/CloseUp.png')
