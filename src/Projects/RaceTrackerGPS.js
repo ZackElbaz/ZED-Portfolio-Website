@@ -141,6 +141,7 @@ function RaceTrackerGPS() {
           <img src={Case} alt="Final Design Sketch" style={{ float: 'left', marginLeft: '15px', maxWidth: '35%', height: 'auto' }} />
           Racetracker AS were provided with an early prototype to use for a few months, their satisfaction with the Racetracker design and tray improvements resulted in an additional 500 tracker orders, a 75% increase to their original order.
         </div>
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

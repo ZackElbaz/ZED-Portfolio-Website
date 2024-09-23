@@ -153,6 +153,7 @@ function LightbugRTK() {
           <img src={AlstomHitachi} alt="Exploded Parts View" />
           <img src={PUBLogo} alt="Exploded Parts View" />
         </div>
+        <p></p>
       </div>
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />
     </div>

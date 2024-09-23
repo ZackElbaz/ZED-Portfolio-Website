@@ -285,6 +285,7 @@ function BicycleAmbulance() {
         <img src={BicycleTrailer} alt="Project" style={{ width: '80%', height: 'auto', display: 'block', marginLeft: 'auto', marginRight: 'auto' }} />
         </p>
         <img src={ProjectImage} alt="Project" style={{ width: '80%', height: 'auto', display: 'block', marginLeft: 'auto', marginRight: 'auto' }} />
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

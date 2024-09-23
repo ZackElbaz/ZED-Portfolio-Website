@@ -136,6 +136,7 @@ function ThreeDGPS() {
         </div>
         <p>By the end of my placement I had created an equation that, using live barometric data from sensors, accurately located the device within 1m of accuracy. This feature can be used in the infrastructure industry to detect building site levels, the depth of holes that need to be dug and the proximity of tools to subterranean pipes. It could also be used underground, outside and in tall buildings such as hospitals to identify what floor a piece of equipment is located, or to create vertical tracking maps for climbing routes, hikes and runs.</p>
         <img src={Equation} alt="Mechanism Design" class="centered-image" style={{ width: '50%', height: 'auto' }} />
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

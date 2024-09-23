@@ -36,12 +36,15 @@
     line-height: 1;
     display: flex;
     align-items: center;
+    justify-content: center; /* Center horizontally */
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text within the flex container */
     color: #ff7300;
 }
 
 .project-buttons-container {
     display: flex;
-    gap: 1.5vw;
+    gap: 1vw;
     align-items: center;
     justify-content: center;
 }
@@ -55,11 +58,13 @@
     flex-shrink: 0;
     font-size: 1vw;
     font-weight: bold;
-    white-space: nowrap;
+    white-space: normal; /* Change from nowrap to normal to allow wrapping */
     display: flex;
     align-items: center;
     border-radius: 1vw;
     transition: background-color 0.3s, color 0.3s, transform 0.2s;
+    max-width: 30vw; /* Optional: Set a maximum width to trigger wrapping */
+    text-align: center; /* Center align text if needed */
 }
 
 /* Hover styles for button */
@@ -85,10 +90,11 @@
 /* Media Query for Portrait Mode */
 @media only screen and (orientation: portrait) {
     .project-bar {
-        padding: 4vw;
+        padding: 1vw;
     }
     .similar-projects-title {
         font-size: 3vw; /* Make font size significantly larger */
+        
     }
     
     .project-button {

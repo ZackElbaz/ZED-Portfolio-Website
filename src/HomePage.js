@@ -6,7 +6,7 @@ import DropdownWidget from './DropdownWidget';
 import VisitorCounter from './VisitorCounter';
 import StarfieldAnimation from 'react-starfield-animation'; // Assuming you've installed this library
 import { useLocation, useNavigate } from 'react-router-dom';
-import { projectsInfo } from './projectsData';
+import { projects } from './projectsData';
 
 // KEEP THESE HERE AS THEY WILL BE USEFUL TO ME IN THE FUTURE
 //import { Link } from 'react-router-dom';
@@ -43,7 +43,7 @@ function HomePage() {
     }, []);
 
     // Sort projects by most recent date and grab the top 3
-    const sortedProjects = projectsInfo
+    const sortedProjects = projects
         .sort((a, b) => b.date - a.date) // Sort by date (newest first)
         .slice(0, 3); // Get the three most recent projects
 

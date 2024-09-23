@@ -253,6 +253,7 @@ function Boeing737Seat() {
           <img src={Key} alt="Key" />
           <img src={AirplaneLayoutConcept} alt="Airplane Layout Concept" />
         </div>
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

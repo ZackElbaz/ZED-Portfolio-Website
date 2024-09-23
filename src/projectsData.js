@@ -1,5 +1,5 @@
 // projectsData.js
-export const projectsInfo = [
+export const projects = [
     { 
     name: 'BicycleAmbulance',
     displayName: 'Bicycle Ambulance',

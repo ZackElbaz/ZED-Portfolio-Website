@@ -120,6 +120,7 @@ function ColouredHalftone() {
           Watch Video
         </a></p>
         <img src={Temporary} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

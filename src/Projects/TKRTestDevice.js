@@ -145,6 +145,7 @@ function TKRTestDevice() {
           <img src={AngledCloseUp} alt="Final Render" />
           <img src={PrintedCloseUp} alt="Exploded Parts View" />
         </div>
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

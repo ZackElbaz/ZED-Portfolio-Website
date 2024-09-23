@@ -20,6 +20,7 @@
 
 /* Fixed content box with borders and customized scrollbar */
 .project-info-box {
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     position: fixed; /* Fix the position relative to the viewport */
     top: 100px; /* Distance from the top of the viewport */
     bottom: 30vw; /* Distance from the bottom of the viewport */
@@ -40,6 +41,7 @@
 }
 
 .project-info-box::-webkit-scrollbar-thumb {
+    pointer-events: auto; /* Ensure it responds to touch events */
     background-color: #535353; /* Color of the scrollbar handle */
     border-radius: 8px; /* Rounded corners for the scrollbar handle */
 }

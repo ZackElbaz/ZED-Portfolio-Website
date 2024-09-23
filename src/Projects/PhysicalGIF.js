@@ -120,6 +120,7 @@ function PhysicalGIF() {
           Go to Website
         </a></p>
         <img src={Carnovsky} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
+        <p></p>
       </div>
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />
     </div>

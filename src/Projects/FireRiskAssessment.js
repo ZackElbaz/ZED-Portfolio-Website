@@ -165,6 +165,7 @@ function FireRiskAssessment() {
           <img src={Robot2} alt="Concept Design 3" />
           <img src={Robot3} alt="Concept Design 1" />
         </div>
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />

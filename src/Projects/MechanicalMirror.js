@@ -120,6 +120,7 @@ function MechanicalMirror() {
           Watch Video
         </a></p>
         <img src={WIRED} alt="Mechanism Design" class="centered-image" style={{ width: '90%', height: 'auto' }} />
+        <p></p>
       </div>
 
       <ProjectBar currentProject={currentProject} ref={projectBarRef} />
