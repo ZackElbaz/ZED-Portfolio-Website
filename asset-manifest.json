@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ZED-Portfolio-Website/static/css/main.aca257c5.css",
+    "main.css": "/ZED-Portfolio-Website/static/css/main.c28416ef.css",
     "main.js": "/ZED-Portfolio-Website/static/js/main.79342d94.js",
     "static/js/453.257c3ee5.chunk.js": "/ZED-Portfolio-Website/static/js/453.257c3ee5.chunk.js",
     "static/media/CloseUp.png": "/ZED-Portfolio-Website/static/media/CloseUp.094abab95e3acf58b405.png",
@@ -77,12 +77,12 @@
     "static/media/Picture2.jpg": "/ZED-Portfolio-Website/static/media/Picture2.e405c50b661cc20e97c1.jpg",
     "index.html": "/ZED-Portfolio-Website/index.html",
     "static/media/HomeSVG.svg": "/ZED-Portfolio-Website/static/media/HomeSVG.9d2cf0db1e05d14948ef3b5e22b13b34.svg",
-    "main.aca257c5.css.map": "/ZED-Portfolio-Website/static/css/main.aca257c5.css.map",
+    "main.c28416ef.css.map": "/ZED-Portfolio-Website/static/css/main.c28416ef.css.map",
     "main.79342d94.js.map": "/ZED-Portfolio-Website/static/js/main.79342d94.js.map",
     "453.257c3ee5.chunk.js.map": "/ZED-Portfolio-Website/static/js/453.257c3ee5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aca257c5.css",
+    "static/css/main.c28416ef.css",
     "static/js/main.79342d94.js"
   ]
 }
