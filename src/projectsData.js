@@ -18,7 +18,7 @@ export const projects = [
     name: 'ColouredHalftone', 
     displayName: 'Coloured Halftones', 
     tags: ['Art'], 
-    date: new Date('May 2020'),
+    date: new Date('December 2019'),
     imagePath: require('./Projects/ColouredHalftoneImages/halftoneTemp.jpg') 
     },
     { 
