@@ -46,6 +46,6 @@ export default App;
 
 // change ForceRefresh.js
 // git add .
-// git commit -m "Live Site""Newest version"
+// git commit -m "Newest version"
 // git push origin main
 // npm run deploy
