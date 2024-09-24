@@ -253,6 +253,7 @@ border-bottom-right-radius: 40px;
   bottom: -20px; /* Adjust the distance from the icon */
   left: 50%; /* Center the text horizontally */
   transform: translateX(-50%); /* Center the text horizontally */
+  font-weight: bold;
 }
 
 .icon-container:hover .text {

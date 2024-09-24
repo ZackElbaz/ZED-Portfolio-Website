@@ -3,7 +3,7 @@
     --project-title-font-size: calc(2rem + 2vw); /* Responsive font size */
     --tag-margin: 1vw; /* Margin between tag list and title */
     --min-title-font-size: 2rem; /* Minimum font size */
-    --max-title-font-size: 3.5rem; /* Maximum font size for large screens */
+    --max-title-font-size: 2.5rem; /* Maximum font size for large screens */
     --min-container-height: 100px; /* Minimum height for containers */
     --min-container-width: 200px; /* Minimum width for containers */
     --line-height: 0.8; /* Default line height */

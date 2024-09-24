@@ -38,6 +38,7 @@
 /* Custom scrollbar styles */
 .project-info-box::-webkit-scrollbar {
     width: 16px; /* Width of the scrollbar */
+    z-index: 1000; /* Try to make it scrollable */
 }
 
 .project-info-box::-webkit-scrollbar-thumb {

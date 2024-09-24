@@ -46,6 +46,6 @@ export default App;
 
 // change ForceRefresh.js
 // git add .
-// git commit -m "Newest version"
+// git commit -m "Refresh Working"
 // git push origin main
 // npm run deploy
