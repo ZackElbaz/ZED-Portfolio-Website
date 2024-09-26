@@ -55,8 +55,8 @@
 }
 
 .dropdown-input:hover {
-  --search-bar-placeholder-color: #020000e1; /* Default placeholder color */
-  background-color: #ffffff !important;
+  --search-bar-placeholder-color: #ffffffe1; /* Default placeholder color */
+  background-color: #ff73003a !important;
 }
 
 .dropdown-arrow svg {
@@ -84,7 +84,7 @@
 }
 
 .dropdown-arrow:hover {
-  background-color: #ffffff !important;
+  background-color: #ff73003a !important;
   transform: scale(1.1);
 }
 

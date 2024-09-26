@@ -59,15 +59,15 @@
 
 .recent-projects-label {
   position: absolute;
-  top: 20px; /* Adjust distance from the top */
-  left: 20px; /* Adjust distance from the left */
-  font-size: 2vw; /* Responsive font size */
-  color: #2d2d2d; /* Text color */
+  top: 10px; /* Adjust distance from the top */
+  left: 10px; /* Adjust distance from the left */
+  font-size: 3vw; /* Responsive font size */
+  color: #ff7300; /* Text color */
   /* #ff7300 ORANGE */
   /* #14f745 GREEN*/
-  background-color: #ff7300; /* Semi-transparent background */
-  padding: 10px 20px; /* Padding for the label */
-  border-radius: 10px; /* Rounded corners */
+  background-color: #0000008f; /* Semi-transparent background */
+  padding: 5px 10px; /* Padding for the label */
+  border-radius: 20px; /* Rounded corners */
   font-weight: bold; /* Make the text bold */
   z-index: 10; /* Ensure it stays on top */
 }
@@ -228,14 +228,12 @@ border-bottom-right-radius: 40px;
 .icon {
   height: 40px; /* Adjust this value as needed */
   filter: invert(1); /* Inverts the color, making black SVGs white */
-  transition: transform 0.2s;
+  transition: transform 0.2s, filter 0.2s;
 }
 
-.icon:hover {
-  filter: invert(0.6); /* Optional: slightly different color on hover */
-}
-
-
+/* .icon:hover {
+  filter: invert(0.6); 
+} */
 
 
 .icon-container:hover .icon {
@@ -258,4 +256,9 @@ border-bottom-right-radius: 40px;
 
 .icon-container:hover .text {
   display: block; /* Show the text on hover */
+}
+
+/* This will change the color to #ff7300 on hover */
+.icon-container:hover .icon {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(99%) saturate(747%) hue-rotate(351deg) brightness(104%) contrast(102%);
 }

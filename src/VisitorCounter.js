@@ -25,8 +25,12 @@ export default function App() {
 
 function WelcomeMessage({ visitorCount }) {
   return (
+    
     <h1>
-      Hello, I'm Zack, welcome to my website! You're visitor{" "} <span style={{ color: "#ff7300" }}>{visitorCount}</span>, have fun exploring!
+      Hi, I'm Zack! Welcome to my site — built by me and{" "}
+      <span className="glow-text">enhanced with AI</span>. Enjoy exploring!
     </h1>
   );
-}
+}// <h1>
+    //   Hello, I'm Zack, welcome to my website! You're visitor{" "} <span style={{ color: "#ff7300" }}>{visitorCount}</span>, have fun exploring!
+    // </h1>

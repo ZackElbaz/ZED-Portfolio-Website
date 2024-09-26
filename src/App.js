@@ -46,6 +46,6 @@ export default App;
 
 // change ForceRefresh.js
 // git add .
-// git commit -m "Refresh Working"
+// git commit -m "Project Title Sizing"
 // git push origin main
 // npm run deploy
